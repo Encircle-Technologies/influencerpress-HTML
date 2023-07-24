@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>influencerpress</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../assets/images/favicon/favicon.png" sizes="32x32"/>
+    <!-- Main Custom css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.4/swiper-bundle.min.css"/>
+    <link href="../assets/css/dist/style.css" media="screen" rel="stylesheet"/>
+
+    <link href="../assets/css/fonts.css" media="screen" rel="stylesheet"/>
+</head>
+<body>
+    <!-- Header Start -->
+    <header class="header absolute top-0 left-0 w-full pt-30 pb-0 z-99">
+        <div class="container-fluid relative z-1">
+            <div class="flex flex-wrap justify-between items-center">
+                <div class="logo order-2">
+                    <a href="#">
+                        <img src="../assets/images/logo.png" alt="Logo">
+                    </a>
+                </div>
+                
+                <div class="navbar order-1">
+                    <button class="navbar-toggler bg-transparent border-0 flex flex-col gap-y-4 order-1 p-0" type="button">
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <div class="mobile-menu-main order-2">
+                        <div class="mobile-menu-main__inner">
+                            <div class="menu-main-menu-container">
+                                <ul id="menu-main-menu" class="flex flex-col lg:gap-x-10 xl:gap-x-16 mt-15 items-center justify-center">
+                                    <li>
+                                        <a href="#">
+                                            Home
+                                        </a>                            
+                                    </li>
+                                    <li><a href="#">About Us</a></li>
+                                    <li><a href="#">Program</a></li>
+                                    <li><a href="#">Results</a></li>
+                                    <li><a href="#">Apply</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="btn-custom block order-3">
+                    <a href="#" class="btn btn-b-white">Book now</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Header End -->
+
+    <section class="banner h-screen">
+        <div class="banner-img w-full h-full !bg-cover" style="background:url('../assets/images/banner-bg.jpg')">
+            <div class="flex flex-col justify-center items-center h-full">
+                <!-- <div class="banner-logo">
+                    <img src="../assets/images/logo/Zulu-Camp-Gold-Logo.png" alt="Zulu-Camp-Gold-Logo" class="max-w-[317px]">
+                </div>
+                <div class="banner-content">
+                    <h1 class="text-white uppercase">
+                        safari & experiences
+                    </h1>
+                </div> -->
+            </div>
+        </div>
+    </section>
+
+    <section class="common-content -mt-[10%]">
+        <div class="container-fluid">
+            <div class="bg-darkGray py-40 px-20 md:py-50 lg:py-70 lg:px-0">
+                <div class="lg:w-9/12 w-full mx-auto flex flex-col gap-y-4 lg:gap-y-8">
+                    <div class="title_white text-center">
+                        <h2>
+                            incredible luxury safari in South Africa
+                        </h2>
+                    </div>
+                    <div class="content content-white text-center">
+                        <p>
+                            Situated on 10,000 hectares in the Limpopo Province, a mere 2½ hour drive or 45 minute helicopter ride from Johannesburg, Zulu Camp at Shambala Private Game Reserve is set under the watchful guardianship of the picturesque, malaria-free Waterberg Mountains, and the magnificent African Bushveld is home to a variety of remarkable flora and fauna including The Big Five.
+                        </p>
+                    </div>
+                    <div class="btn-custom justify-center">
+                        <a href="#" class="btn btn-white-small">
+                            <span></span>
+                            About Us
+                            <span></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="logo-with-image-grid lg:py-80 py-40">
+        <div class="container-fluid">
+            <div class="section-title flex flex-col items-center mb-40">
+                <div class="title-icon lg:mb-[32px] mb-[16px]">
+                    <img src="../assets/images/logo/the-leading-hotels.svg" alt="the-leading-hotels" class="max-w-full h-auto block">
+                </div>
+                <div class="title_gray text-center">
+                    <h2>
+                        Stay in the Bush
+                    </h2>
+                </div>
+                <div class="content content-gray mt-[7px] text-center lg:max-w-[810px]">
+                    <p>
+                        Select from one of our luxurious chalets at Zulu Camp, or the Nelson Mandela Villa which offers six elegant suites and can be booked in its entirety.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="flex flex-wrap items-start justify-center lg:mx-minus-15 mx-0 lg:gap-y-0 gap-y-7">
+                <div class="lg:w-1/2 w-full lg:px-15 px-0">
+                    <div class="logo-with-img">
+                        <div class="img landscape">
+                            <img src="../assets/images/zulu-camp-ico-img.jpg" alt="zulu-camp-ico-img">
+                        </div>
+                        <div class="overlay">
+                            <div class="ico">
+                                <img src="../assets/images/logo/Zulu-Camp-Gold-Logo.png" alt="Zulu-Camp-Gold-Logo" class="max-w-full h-auto block">
+                            </div>
+                            <div class="btn-custom">
+                                <a href="#" class="btn btn-b-white">explore</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:w-1/2 w-full lg:px-15 px-0">
+                    <div class="logo-with-img">
+                        <div class="img landscape">
+                            <img src="../assets/images/nelsonmandela-villa-ico-img.jpg" alt="zulu-camp-ico-img">
+                        </div>
+                        <div class="overlay">
+                            <div class="ico">
+                                <img src="../assets/images/logo/Nelson-Mandela-Villa-Gold-Logo.png" alt="Nelson-Mandela-Villa-Gold-Logo" class="max-w-full h-auto block">
+                            </div>
+                            <div class="btn-custom">
+                                <a href="#" class="btn btn-b-white">explore</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="fullimg-with-content bg-gold bg-opacity-[0.06] lg:py-80 py-40 mb-40">
+        <div class="container-fluid">
+            <div class="fullimg-bg">
+                <img src="../assets/images/Saxon-South-Africa-4367.jpg" alt="Saxon-South-Africa-4367" class="img-fluid">
+                <!-- <video width="320" height="240" muted autoplay loop>
+                    <source src="../assets/images/video/videoplayback.mp4" type="video/mp4">
+                </video> -->
+                <div class="overlay flex flex-col items-center justify-center w-full h-full">
+                    <div class="title_white">
+                        <h4>
+                            Discover the ultimate safari experiences
+                        </h4>
+                    </div>
+                    <div class="content content-white mt-10">
+                        <p>
+                            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt.
+                        </p>
+                    </div>
+                    <div class="btn-custom mt-[16px] lg:mt-[32px]">
+                        <a href="#" class="btn btn-b-white">
+                            explore
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="discover-img-grid my-40">
+        <div class="container-fluid">
+            <div class="section-title flex flex-col items-center mb-40">
+                <div class="title_gray text-center">
+                    <h2>
+                        Discover more of Shambala
+                    </h2>
+                </div>
+                <div class="content content-gray mt-[7px] text-center lg:max-w-[810px]">
+                    <p>
+                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="flex flex-wrap items-center justify-center relative lg:mx-minus-15 mx-0 gap-y-7 lg:gap-y-0">
+                <div class="w-full lg:w-4/12 lg:px-15 px-0">
+                    <div class="discover-img-content">
+                        <div class="img portrait">
+                            <img src="../assets/images/discover_about_us.jpg" alt="discover_about_us" class="img-fluid"/>
+                        </div>
+                        <div class="overlay">
+                            <div class="title_white">
+                                <h4>
+                                    About us
+                                </h4>
+                            </div>
+                            <div class="content content-white">
+                                <p>
+                                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt.
+                                </p>
+                            </div>
+                            <div class="btn-custom">
+                                <a href="#" class="btn btn-b-white">
+                                    explore
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full lg:w-4/12 lg:px-15 px-0">
+                    <div class="discover-img-content">
+                        <div class="img portrait">
+                            <img src="../assets/images/discover_our_location.jpg" alt="discover_our_location" class="img-fluid"/>
+                        </div>
+                        <div class="overlay">
+                            <div class="title_white">
+                                <h4>
+                                    our location
+                                </h4>
+                            </div>
+                            <div class="content content-white">
+                                <p>
+                                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt.
+                                </p>
+                            </div>
+                            <div class="btn-custom">
+                                <a href="#" class="btn btn-b-white">
+                                    explore
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full lg:w-4/12 lg:px-15 px-0">
+                    <div class="discover-img-content">
+                        <div class="img portrait">
+                            <img src="../assets/images/discover_stories.jpg" alt="discover_stories" class="img-fluid"/>
+                        </div>
+                        <div class="overlay">
+                            <div class="title_white">
+                                <h4>
+                                    stories from camp
+                                </h4>
+                            </div>
+                            <div class="content content-white">
+                                <p>
+                                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt.
+                                </p>
+                            </div>
+                            <div class="btn-custom">
+                                <a href="#" class="btn btn-b-white">
+                                    explore
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonial py-40">
+        <div class="container-fluid">
+            <div class="testimonial-slider swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="flex flex-col justify-center items-center lg:px-80 lg:py-60 py-40 px-25 text-center">
+                            <div class="ico mb-20">
+                                <img src="../assets/images/logo/zulu-camp-gold-icon.svg" alt="zulu-camp-gold-icon" class="max-w-full h-auto block"/>
+                            </div>
+                            <div class="content content-gold lg:mb-[26px] mb-[16px]">
+                                <p>
+                                   “Fantastic experience at Shambala! This is a bucket list type of a place! We loved the fine attention to detail and the sightings were amazing. A big thank you to our Game Ranger Shaun who was skilled, professional and on top of everything. Thank you for also keeping us alive during a Lion encounter. Our stay was extremely memorable!”
+                                </p>
+                            </div>
+                            <div class="author-name content content-gold">
+                                <p>
+                                    Annete Nel
+                                </p>
+                            </div>
+                            <div class="btn-custom lg:mt-[32px] mt-[16px]">
+                                <a href="javascript:void(0);" class="btn btn-b-gold">Book now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="testimonial-button-prev absolute top-[50%] translate-y-minus_50 left-0 ml-[38px] z-1">
+                <svg width="73" height="73" viewBox="0 0 73 73" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="36.5" cy="36.5" r="36.5" transform="rotate(180 36.5 36.5)" fill="#4D4D4D"/>
+                    <path d="M55 36L18.5 36" stroke="white" stroke-width="2"/>
+                    <path d="M22 39L19 36L22 33" stroke="white" stroke-width="2"/>
+                </svg>                            
+            </div>
+            <div class="testimonial-button-next absolute top-[50%] translate-y-minus_50 right-0 mr-[38px] z-1">
+                <svg width="73" height="73" viewBox="0 0 73 73" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="36.5" cy="36.5" r="36.5" fill="#4D4D4D"/>
+                    <path d="M18 37L54.5 37" stroke="white" stroke-width="2"/>
+                    <path d="M51 34L54 37L51 40" stroke="white" stroke-width="2"/>
+                </svg>                            
+            </div>
+        </div>
+    </section>
+
+    <section class="insta-feed pt-40 pb-20">
+        <div class="container-fluid">
+            <div class="section-title flex flex-col items-left mb-40">
+                <div class="title_gray">
+                    <h2>
+                        Connect with us on Instagram
+                    </h2>
+                </div>
+                <!-- <div class="content content-gray mt-[7px]">
+                    <p>
+                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                </div> -->
+            </div>
+        </div>
+        <div class="container-fluid relative">
+            <div class="insta-slider swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="insta-img portrait">
+                            <img src="../assets/images/insta1.jpg" alt="insta1" class="max-w-full h-auto block"/>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="insta-img portrait">
+                            <img src="../assets/images/insta2.jpg" alt="insta1" class="max-w-full h-auto block"/>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="insta-img portrait">
+                            <img src="../assets/images/insta3.jpg" alt="insta1" class="max-w-full h-auto block"/>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="insta-img portrait">
+                            <img src="../assets/images/insta4.jpg" alt="insta1" class="max-w-full h-auto block"/>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="insta-img portrait">
+                            <img src="../assets/images/insta5.jpg" alt="insta1" class="max-w-full h-auto block"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="insta-button-prev absolute top-[50%] translate-y-minus_50 left-0 ml-[38px] z-1">
+                <svg width="73" height="73" viewBox="0 0 73 73" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="36.5" cy="36.5" r="36.5" transform="rotate(180 36.5 36.5)" fill="#4D4D4D"/>
+                    <path d="M55 36L18.5 36" stroke="white" stroke-width="2"/>
+                    <path d="M22 39L19 36L22 33" stroke="white" stroke-width="2"/>
+                </svg>                            
+            </div>
+            <div class="insta-button-next absolute top-[50%] translate-y-minus_50 right-0 mr-[38px] z-1">
+                <svg width="73" height="73" viewBox="0 0 73 73" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="36.5" cy="36.5" r="36.5" fill="#4D4D4D"/>
+                    <path d="M18 37L54.5 37" stroke="white" stroke-width="2"/>
+                    <path d="M51 34L54 37L51 40" stroke="white" stroke-width="2"/>
+                </svg>                            
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer mt-40">
+        <div class="container-fluid">
+            <div class="newsletter bg-darkGray py-25">
+                <div class="flex flex-wrap justify-center">
+                    <a href="javascript:void(0)" class="animate-newsletter">Sign up for our latest stories, news and
+                        offers
+                        <img src="../assets/images/down-arrow.svg" class="animate-icon ml-5 w-[16px]" alt="">
+                    </a>
+                </div>
+                <div class="newsletter-form">
+                    <div class="lg:w-10/12 w-full m-auto">
+                        <div class="gform_wrapper">
+                            <form>
+                                <div class="gform_body">
+                                    <ul>
+                                        <li id="gform_fields_1">
+                                            <input type="text" placeholder="Name">
+                                        </li>
+                                        <li id="field_1_3">
+                                            <input type="text" placeholder="Surname">
+                                        </li>
+                                        <li id="field_1_4">
+                                            <input type="text" placeholder="Email Address">
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="gform_footer top">
+                                    <button class="gravityform__button gform_button button" id="gform_submit_button_1"
+                                        type="submit">Sign Up</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="xl:w-11/12 w-full mx-auto">
+                    <div class="flex mobile_small:flex-col mobile:flex-col tablet:flex-col tablet_big:flex-col xl:flex-wrap gap-10 xl:gap-6 items-center xl:items-start xl:justify-between w-full p-0 m-0 relative">
+                        <div class="footer-left">
+                            <div class="footer-logo">
+                                <a href="javascript:void(0);">
+                                    <img src="../assets/images/logo/footer-gold-logo.svg" alt="footer-gold-logo" class="max-w-full h-auto block"/>
+                                </a>
+                            </div>
+                            <ul class="footer-social-media">
+                                <li>
+                                    <a href="javascript:void(0);">
+                                        <img src="../assets/images/social-icon/facebook.svg" alt="facebook" class="max-w-full block h-auto" title="Facebook"/>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);">
+                                        <img src="../assets/images/social-icon/insta.svg" alt="instagram" class="max-w-full block h-auto" title="Instagram"/>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);">
+                                        <img src="../assets/images/social-icon/trip.svg" alt="tripadvisor" class="max-w-full block h-auto" title="Tripadvisor"/>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer-menu">
+                            <ul>
+                                <li>
+                                    <a href="javascript:void(0);">accommodation</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);">experiences</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);">Shambala spa</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);">about</a>
+                                </li>
+                            </ul>
+                            <ul>
+                                <li>
+                                    <a href="javascript:void(0);">Conservation & community</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);">Stories from camp</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);">Press</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);">Contact</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer-right">
+                            <div class="btn-custom">
+                                <a href="javascript:void(0);" class=" btn btn-gold">
+                                    Book now
+                                </a>
+                            </div>
+                            <div class="footer-contact">
+                                <p>
+                                    Waterberg, South Africa
+                                </p>
+                                <a href="tel:+27 (0)11 292 6000">
+                                    T: +27 (0)11 292 6000
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom-menu">
+                <ul>
+                    <li>
+                        <a href="javascript:void(0);">Privacy Policy</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);">Terms & Conditions</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);">Covid 19</a>
+                    </li>                      
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+</body>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.4/swiper-bundle.min.js"></script>
+<script type="text/javascript" src="../assets/js/custom.js"></script>
+</html>

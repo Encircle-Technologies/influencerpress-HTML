@@ -1,0 +1,360 @@
+@tailwind utilities;
+@tailwind base;
+@tailwind components;
+
+@layer base {
+    /* * {
+        @apply duration-300 ease-linear delay-150;
+    } */
+    *, ::before, ::after {
+        @apply box-border;
+    }
+    html {
+        @apply scroll-smooth overflow-x-hidden;
+    }
+    body {
+        @apply p-0 m-0 text-black font-primary overflow-x-hidden;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        @apply font-500 font-primary m-0 p-0;
+    }
+    h1 {
+        @apply text-30 leading-[48px] xl:text-50 xl:leading-68 tracking-15;
+    }
+    h2 {
+        @apply text-26 leading-[38px] xl:text-32 xl:leading-44 tracking-15;
+    }
+    h3 {
+        @apply text-24 leading-[35px] xl:text-30 xl:leading-41 tracking-15;
+    }
+    h4 {
+        @apply text-20 leading-[30px] xl:text-26 xl:leading-36 tracking-15;
+    }
+    h5 {
+        @apply text-18 leading-[27px] xl:text-24 xl:leading-33 tracking-15;
+    }
+    h6 {
+        @apply text-16 leading-[24px] xl:text-21 xl:leading-29 tracking-15;
+    }
+
+    .title_white h1,
+    .title_white h2,
+    .title_white h3,
+    .title_white h4,
+    .title_white h5,
+    .title_white h6 {
+        @apply text-white uppercase;
+    }
+    .title .sub-title {
+        @apply block text-10 leading-14 font-300 font-primary tracking-15 not-italic uppercase;
+    }
+    .title_white .sub-title {
+        @apply text-white;
+    }
+    .container-fluid {
+        @apply px-20 lg:px-50;
+    }
+    .content p {
+        @apply text-14 leading-22 tracking-5 m-0 p-0 font-primary font-400 mb-20 last:mb-0;
+    }
+    .content-white p {
+        @apply text-white;
+    }
+    img {
+        @apply block max-w-full h-auto;
+    }
+    .img {
+        @apply block;
+    }
+    .img-fluid {
+        @apply w-full h-full object-cover;
+    }
+    blockquote p {
+        @apply text-[15px] leading-[23px] tracking-8 font-primary font-500 italic m-0 p-0 mb-15;
+    }
+    blockquote span {
+        @apply block text-10 leading-14 font-300 font-primary tracking-15 not-italic uppercase;
+    }
+    .block-white p,
+    .block-white span {
+        @apply text-white;
+    }
+}
+
+@layer components {
+    /*Animation css start */
+    @keyframes fadeInUp {
+        0% {
+            opacity: 0;
+            transform: translateY(10%);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0%);
+        }
+    }
+    /*Animation css end */
+
+    /* button css start*/
+    .btn:focus {
+        @apply outline-0 shadow-none;
+    }
+    .btn-custom {
+        @apply flex flex-wrap items-center space-x-5 gap-y-4;
+    }
+    .btn-custom .btn-white-small {
+        @apply flex flex-wrap items-center m-0 p-0 gap-x-6 text-white opacity-100 text-12 leading-16 tracking-8 font-primary font-800 uppercase no-underline duration-300 ease-linear delay-150;
+    }
+    .btn-custom .btn-white-small span {
+        @apply bg-white w-[25px] h-[2px] duration-300 ease-linear delay-150;
+    }
+    .btn-custom .btn-white-small:hover span {
+        @apply w-[30px];
+    }
+
+    .btn-custom .btn-b-white {
+        @apply flex flex-wrap items-center m-0 px-[38px] py-[13px] bg-transparent border-[1px] border-solid border-white text-white text-12 leading-16 rounded-[10px] font-primary font-800 uppercase no-underline duration-300 ease-linear delay-150;
+    }
+    .btn-custom .btn-b-white:hover {
+        @apply bg-white border-white text-black;
+    }
+    /* button css end*/
+
+    /* Menu css start*/
+    @media screen and (max-width: 1199.9px) {
+        body.menu-open {
+            overflow: hidden;
+            -webkit-overflow: hidden;
+        }
+    }
+    body.menu-open {
+        @apply xlscreen:overflow-y-hidden;
+    }
+    header.header.is-sticky {
+        @apply bg-black bg-opacity-[0.55] fixed duration-300 ease-linear delay-150 w-full z-999 py-10
+    }
+    .header:before {
+        @apply duration-300 ease-linear delay-150;
+    }
+    body.active .header:before,
+    .header.active:before {
+        content: "";
+        @apply bg-black -z-[1] opacity-[0.55]  mix-blend-screen absolute top-0 left-0 w-full h-[481px];
+    }
+    header.header .logo img {
+        @apply duration-300 ease-linear delay-150
+    }
+    .navbar {
+        @apply flex flex-col;
+    }
+    .navbar ul {
+        @apply m-0 p-0 list-none;
+    }
+    .navbar .mobile-menu-main .menu-main-menu-container ul > li {
+        @apply static duration-300 ease-linear ;
+    }
+    .navbar .mobile-menu-main .menu-main-menu-container > ul > li >a {
+        @apply flex flex-wrap gap-2 items-center text-white text-60 leading-[72px] font-primary font-500 tracking-15 m-0 p-0 no-underline uppercase duration-300 ease-linear delay-150 hover:text-opacity-50;
+    }
+    .navbar .mobile-menu-main .menu-main-menu-container > ul > li ul.sub-menu {
+        @apply absolute top-[auto] left-0 hidden w-full list-none m-0 p-0 mb-[67px] pt-[15px] z-1;
+        animation: fadeInUp 0.3s;
+        -webkit-animation: fadeInUp 0.3s;
+        -moz-animation: fadeInUp 0.3s;
+        -o-animation: fadeInUp 0.3s;
+        -ms-animation: fadeInUp 0.3s;
+    }
+    .navbar .mobile-menu-main .menu-main-menu-container > ul > li:hover ul.sub-menu {
+        @apply block z-9;
+    }
+    .navbar .mobile-menu-main .menu-main-menu-container > ul > li > ul.sub-menu li {
+        @apply flex flex-wrap justify-center items-start w-full m-0 p-0 space-x-[36px];
+    }
+    .menu-content {
+        @apply block relative m-0 p-0 w-full;
+    }
+    .menu-content h5 {
+        @apply text-white uppercase
+    }
+    .menu-content .btn-custom {
+        @apply mt-[6px];
+    }
+    .menu-content .btn-custom .btn-white-small {
+        @apply opacity-75 hover:opacity-100;
+    } 
+    header.header .navbar .navbar-toggler {
+        @apply relative z-1
+    }
+    header.header .navbar .navbar-toggler span {
+        @apply bg-white h-[3px] w-[71px];
+        transition: all 300ms ease;
+    }
+    .menu-open header.header .navbar .navbar-toggler {
+        @apply gap-y-[0px]
+    } 
+    .menu-open header.header .navbar .navbar-toggler span:first-child {
+        transform: translateY(0) rotate(45deg);
+    } 
+    /* .menu-open header.header .navbar .navbar-toggler span:nth-child(2) {
+        @apply hidden;
+    } */
+    .menu-open header.header .navbar .navbar-toggler span:nth-child(2) {
+        transform: translateY(-2px) rotate(-45deg);
+    } 
+    header.header .navbar ul li.current-menu-item a {
+        @apply text-opacity-50
+    }
+
+    .header #menu-main-menu {
+        @apply w-full pb-30; 
+    }
+    .mobile-menu-main {
+        @apply bg-black h-screen w-full left-0 overflow-y-auto pl-50 pr-50 absolute -top-[30px] translate-x-[100%] duration-300 ease-linear delay-150
+    }
+    /* .mobile-menu-main {
+        @apply hidden;  
+    } */
+    .header .mobile-menu-main.active {
+        @apply translate-x-[0px];   
+    }
+    .mobile-menu-main__inner {
+        @apply pb-80 flex flex-col justify-center items-center w-full h-full;   
+    }
+    .header.is-sticky #menu-main-menu {
+        @apply bg-black;
+    }
+    header.header.is-sticky .navbar ul li a {
+        @apply text-white;
+    }
+    header.header.is-sticky .navbar ul li span.submenu-button img,
+    header.header.is-sticky .navbar ul li:hover span.submenu-button img {
+        filter: inherit;
+    }
+    header.header .navbar ul li ul.sub-menu {
+        @apply p-10 text-left mt-20;
+        transform: inherit;
+    } 
+
+    /* Menu css end*/
+
+    /* Footer css start */
+    .footer {
+        @apply flex flex-col relative p-0 pb-20 w-full;
+    }
+    .footer .newsletter {
+        @apply relative m-0 mb-40 block w-full overflow-hidden px-25;
+    }
+    .footer .newsletter a {
+        @apply text-white uppercase lg:text-[15px] text-14 font-900 tracking-8 mobile:text-center mobile_small:text-center flex;
+        -webkit-font-smoothing: antialiased; 
+    }
+    .footer .newsletter a.animate-newsletter img {
+        @apply ml-5;
+    }
+    .footer .newsletter .gform_wrapper form {
+        @apply flex mt-30 justify-center mobile:flex-col mobile_small:flex-col;
+    }
+    .footer .newsletter .gform_wrapper .gform_body {
+        @apply w-full mobile:w-full mobile_small:w-full m-auto my-0;
+    }
+    .footer .newsletter .gform_wrapper .gform_body .gform_heading {
+        @apply hidden;
+    }
+    .footer .newsletter .gform_wrapper ul {
+        @apply flex flex-wrap justify-between pr-30 w-full p-0 m-0 mobile:flex-col mobile:pr-0 mobile_small:flex-col mobile_small:pr-0;
+    }
+    .footer .newsletter .gform_wrapper ul li {
+        @apply w-[calc(33.33%_-_20px)] mobile:w-full mobile:mb-10 mobile_small:w-full mobile_small:mb-10;
+    }
+    .footer .newsletter .gform_wrapper .gform-body input {
+        @apply w-full bg-transparent sm:py-[12px] py-[8px] px-[12px] border-white border-[1px] border-solid outline-none text-white;
+    }   
+    .footer .newsletter .gform_wrapper .gform-body input::placeholder {
+        @apply text-white;
+    }
+    .footer .newsletter .gform_wrapper .gform_footer {
+        @apply my-0 py-0 ml-[18px] mobile:ml-0 mobile:mt-[15px] mobile_small:ml-0 mobile_small:mt-[15px];
+    }
+    .footer .newsletter .gform_wrapper .gform_footer input {
+        @apply relative border-[1px] border-solid sm:py-[12px] py-[8px] px-30 bg-transparent border-white text-white uppercase cursor-pointer mobile:w-full mobile_small:w-full text-14 mb-0;
+    }
+    .footer .newsletter .gform_wrapper .gform_footer input:hover {
+        @apply bg-white border-white;
+    }
+    .footer .newsletter .gform_wrapper .gform_footer input:hover:before {
+        @apply duration-300 ease-linear delay-150 w-[60px];
+    }
+    .footer .newsletter .rotate__reduce-icon {
+        @apply rotate-180;
+    }
+    .footer-bottom {
+        @apply block w-full relative m-0 xl:pt-[50px] pb-40 xl:pb-100 p-0;
+    }
+    .footer-left {
+        @apply flex flex-col items-center justify-start m-0 p-0 relative gap-6 xl:flex-212;
+    }
+    .footer-social-media {
+        @apply flex flex-wrap items-center justify-center m-0 p-0 w-full relative list-none gap-4;
+    }
+    .footer-social-media li {
+        @apply block relative overflow-hidden w-[22px] h-[22px] m-0 p-0;
+    }
+    .footer-social-media li a {
+        @apply flex flex-col items-center justify-center relative w-full h-full m-0 p-0 rounded-50 duration-300 ease-linear delay-150;
+    }
+    .footer-menu {
+        @apply flex flex-wrap gap-x-10 gap-y-4 items-start lg:justify-center m-0 p-0 relative xl:flex-1;
+    }
+    .footer-menu ul {
+        @apply flex flex-col items-start justify-center m-0 p-0 list-none;
+    }
+    .footer-menu ul li {
+        @apply flex flex-col m-0 p-0 relative my-[8px] first:mt-0 last:mb-0;
+    }
+    .footer-menu ul li a {
+        @apply mobile_extra_small:text-12 text-16 font-primary font-500 not-italic leading-22 tracking-15 m-0 p-0 no-underline uppercase hover:underline duration-300 ease-linear delay-150;
+    }
+    .footer-right {
+        @apply flex flex-col items-center text-center xl:text-right xl:items-end justify-start m-0 p-0 relative gap-6 xl:flex-196;
+    }
+    .footer-right .btn-custom .btn {
+        @apply w-[196px] justify-center
+    }
+    .footer-right .footer-contact {
+        @apply block relative m-0 p-0 w-full
+    }
+    .footer-right .footer-contact p {
+        @apply text-14 leading-22 m-0 p-0 font-primary font-400 tracking-5 not-italic capitalize
+    }
+    .footer-right .footer-contact a {
+        @apply text-14 leading-22 m-0 p-0 font-primary font-400 tracking-5 not-italic no-underline hover:underline duration-300 ease-linear delay-150
+    }
+    .footer .footer-bottom-menu {
+        @apply flex flex-col items-center justify-center m-0 p-0 relative w-full
+    }
+    .footer .footer-bottom-menu ul {
+        @apply flex flex-wrap m-0 p-0 relative list-none divide-x divide-y-0 divide-solid divide-opacity-60;
+    }
+    .footer .footer-bottom-menu ul li {
+        @apply px-10 text-center flex flex-col
+    }
+    .footer .footer-bottom-menu ul li a {
+        @apply text-12 leading-[1] m-0 p-0 font-primary font-400 tracking-8 capitalize not-italic opacity-60 no-underline hover:opacity-100 hover:underline duration-300 ease-linear delay-150
+    }
+    /* Footer css end */
+}
+
+@layer utilities {
+    .banner {
+        @apply relative w-full overflow-hidden z-1;
+    }
+    .banner .banner-img:before {
+        content: "";
+        @apply absolute top-0 left-0 w-full h-[231px] bg-header-gradient;
+    }
+}
