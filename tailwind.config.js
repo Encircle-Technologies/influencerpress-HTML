@@ -14,7 +14,8 @@ module.exports = {
     darkMode: 'class', // or 'media' or 'class' 
     theme: {
         fontFamily: {
-            primary: ['Avenir LT Std'],    
+            primary: ['Inter'],
+            secondary: ['Zimra'],
         },
         flex: {
             '1': '1 1 0%',
@@ -107,9 +108,12 @@ module.exports = {
             'minus-15': '-15px',
         },
         letterSpacing: {
+            '4': '0.04em',
             '5': '0.05em',
+            '6': '0.06em',
             '8': '0.08em',            
-            '15': '0.15em',         
+            '10': '0.1em',         
+            '15': '0.15em',
         },
         fontSize: {
             10: '10px',
@@ -137,6 +141,8 @@ module.exports = {
             66: '66px',
         },
         fontWeight: {
+            100: '100',
+            200: '200',
             300: '300',
             400: '400',
             500: '500',
@@ -190,7 +196,7 @@ module.exports = {
         },
         backgroundImage: theme => ({           
             none: 'none',
-            'header-gradient': 'linear-gradient(180deg, #000000 -90.23%, rgba(0, 0, 0, 0) 62.07%)',
+            'header-gradient': 'linear-gradient(180deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 62.07%)',
             'box-gradient': 'linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4))',
         }),
         borderRadius: {
@@ -230,7 +236,7 @@ module.exports = {
             contain: 'contain',
         },
         blur: {
-
+            10: '10px',
         },
         brightness: {
 
