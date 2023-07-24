@@ -1,8 +1,3 @@
-/**
-* Configuration
-*/
-// const defaultTheme = require('tailwindcss/defaultTheme')
-
 module.exports = {
     mode: 'jit',
     content: 
@@ -114,6 +109,7 @@ module.exports = {
             '8': '0.08em',            
             '10': '0.1em',         
             '15': '0.15em',
+            '47': '0.47em',
         },
         fontSize: {
             10: '10px',
@@ -139,6 +135,8 @@ module.exports = {
             56: '56px',
             60: '60px',
             66: '66px',
+            72: '72px',
+            78: '78px',
         },
         fontWeight: {
             100: '100',
@@ -164,8 +162,10 @@ module.exports = {
             32: '32px',
             33: '33px',
             36: '36px',
+            38: '38px',
             41: '41px',
             44: '44px',
+            48: '48px',
             68: '68px',
         },
         inset: {

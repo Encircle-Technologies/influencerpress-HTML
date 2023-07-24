@@ -32,161 +32,17 @@ $(document).ready(function() {
     });
 // Menu End
 
-
-// Footer Animation start
-if ($('.footer').length) {
-    $(".animate-newsletter").click(function () {
-        $(".newsletter-form").slideToggle('slow');
-        $('.animate-icon').toggleClass("rotate__reduce-icon")
+// Circle Start
+$(document).ready(function () {
+    const text = document.querySelector(".text");
+    text.innerHTML = text.innerText
+        .split("")
+        .map(
+            (char, i) => `<span style="transform:rotate(${i * 14.7}deg)">${char}</span>`
+        )
+        .join("");
     });
-    $(".newsletter-form").hide();
-}
-// Footer Animation end
-
-
-// Swiper slider start
-    const testimonial = new Swiper(".testimonial-slider", {
-        loop: false,
-        slidesPerView: 1,
-        spaceBetween: 0,
-        navigation: {
-            nextEl: ".testimonial-button-next",
-            prevEl: ".testimonial-button-prev",
-        },
-    });
-
-    const insta = new Swiper(".insta-slider", {
-        loop: true,
-        slidesPerView: 1,
-        spaceBetween: 30,
-        speed: 800,
-        autoplay: {
-            delay: 500,
-            disableOnInteraction: true,
-        },
-        navigation: {
-            nextEl: ".insta-button-next",
-            prevEl: ".insta-button-prev",
-        },
-        breakpoints: {
-            640: {
-              slidesPerView: 2,
-              spaceBetween: 30,
-            },
-            768: {
-              slidesPerView: 3,
-              spaceBetween: 30,
-            },
-            1024: {
-              slidesPerView: 4,
-              spaceBetween: 40,
-            },
-        },
-    });
-
-    const discoverslide = new Swiper(".discover-slide", {
-        loop: true,
-        slidesPerView: 1,
-        spaceBetween: 30,
-        speed: 800,
-        autoplay: {
-            delay: 1000,
-            disableOnInteraction: true,
-        },
-        navigation: {
-            nextEl: ".discover-slide-button-next",
-            prevEl: ".discover-slide-button-prev",            
-        },
-        breakpoints: {
-            640: {
-              slidesPerView: 1.5,
-              spaceBetween: 30,
-            },
-            768: {
-              slidesPerView: 2.5,
-              spaceBetween: 30,
-            },
-            1024: {
-              slidesPerView: 2.5,
-              spaceBetween: 40,
-            },
-        },
-    });
-
-    const accommodationslide = new Swiper(".accommodation-slide", {
-        loop: true,
-        slidesPerView: 1,
-        centeredSlides: true,
-        spaceBetween: 30,
-        speed: 800,
-        autoplay: {
-            delay: 1000,
-        },
-        navigation: {
-            nextEl: ".accommodation-slide-button-next",
-            prevEl: ".accommodation-slide-button-prev",            
-        },
-        breakpoints: {
-            640: {
-              slidesPerView: 1.5,
-              spaceBetween: 30,
-            },
-            768: {
-              slidesPerView: 1,
-              spaceBetween: 30,
-            },
-            1024: {
-              slidesPerView: 2,
-              spaceBetween: 36,
-            },
-        },
-    });
-
-    const modelslider = new Swiper(".modal-slider", {
-        loop: true,
-        slidesPerView: 1,
-        spaceBetween: 30,
-        speed: 800,
-        // autoplay: {
-        //     delay: 500,
-        //     disableOnInteraction: true,
-        // },
-        navigation: {
-            nextEl: ".modal-button-next",
-            prevEl: ".modal-button-prev",
-        },
-    });
-
-    const storiesslide = new Swiper(".stories-slide", {
-        loop: true,
-        slidesPerView: 1,
-        spaceBetween: 30,
-        speed: 800,
-        // autoplay: {
-        //     delay: 1000,
-        //     disableOnInteraction: true,
-        // },
-        navigation: {
-            nextEl: ".stories-slide-button-next",
-            prevEl: ".stories-slide-button-prev",            
-        },
-        breakpoints: {
-            640: {
-              slidesPerView: 1.5,
-              spaceBetween: 30,
-            },
-            768: {
-              slidesPerView: 2.5,
-              spaceBetween: 30,
-            },
-            1024: {
-              slidesPerView: 2.5,
-              spaceBetween: 40,
-            },
-        },
-    });
-
-// Swiper slider end
+// Circle End
 
 // Modal Start
 $(document).ready(function() {
