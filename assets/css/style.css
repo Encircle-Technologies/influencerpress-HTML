@@ -3,9 +3,6 @@
 @tailwind components;
 
 @layer base {
-    /* * {
-        @apply duration-300 ease-linear delay-150;
-    } */
     *, ::before, ::after {
         @apply box-border;
     }
@@ -13,7 +10,7 @@
         @apply scroll-smooth overflow-x-hidden;
     }
     body {
-        @apply p-0 m-0 text-white bg-black font-primary overflow-x-hidden;
+        @apply p-0 m-0 text-white bg-black font-primary;
     }
     h1,
     h2,
@@ -80,6 +77,9 @@
     .block-white span {
         @apply text-white;
     }
+    ul {
+        @apply list-none;
+    }
 }
 
 @layer components {
@@ -104,18 +104,10 @@
           opacity: 0;
           transform: translateY(-15px);
         }
-        /* 25% {
-            opacity: 0.5;
-            transform: translateY(-10px);
-          } */
         50% {
             opacity: 1;
           transform: translateY(0px);
         }
-        /* 75% {
-            opacity: 0.5;
-          transform: translateY(10px);
-        } */
         100% {
             opacity: 0;
             transform: translateY(15px);
@@ -264,20 +256,16 @@
 
     /* Footer css start */
     .footer {
-        @apply flex flex-col relative p-0 pb-20 w-full;
+        @apply flex flex-col relative p-0 w-full;
     }
     .footer .newsletter {
-        @apply relative m-0 mb-40 block w-full overflow-hidden px-25;
+        @apply relative m-0 block w-full overflow-hidden lg:py-100 py-50;
     }
-    .footer .newsletter a {
-        @apply text-white uppercase lg:text-[15px] text-14 font-900 tracking-8 mobile:text-center mobile_small:text-center flex;
-        -webkit-font-smoothing: antialiased; 
-    }
-    .footer .newsletter a.animate-newsletter img {
-        @apply ml-5;
+    .footer .news-pattern {
+        @apply bg-[url('./../../images/newslatter-pattern.png')] bg-cover bg-no-repeat bg-center bg-fixed
     }
     .footer .newsletter .gform_wrapper form {
-        @apply flex mt-30 justify-center mobile:flex-col mobile_small:flex-col;
+        @apply flex mt-60 justify-center flex-col;
     }
     .footer .newsletter .gform_wrapper .gform_body {
         @apply w-full mobile:w-full mobile_small:w-full m-auto my-0;
@@ -286,37 +274,32 @@
         @apply hidden;
     }
     .footer .newsletter .gform_wrapper ul {
-        @apply flex flex-wrap justify-between pr-30 w-full p-0 m-0 mobile:flex-col mobile:pr-0 mobile_small:flex-col mobile_small:pr-0;
+        @apply flex flex-wrap justify-between gap-5 w-full p-0 m-0 mobile:flex-col mobile_small:flex-col;
     }
     .footer .newsletter .gform_wrapper ul li {
-        @apply w-[calc(33.33%_-_20px)] mobile:w-full mobile:mb-10 mobile_small:w-full mobile_small:mb-10;
+        @apply w-[calc(50%_-_15px)] mobile:w-full mobile:mb-10 mobile_small:w-full mobile_small:mb-10 last:w-full;
     }
-    .footer .newsletter .gform_wrapper .gform-body input {
-        @apply w-full bg-transparent sm:py-[12px] py-[8px] px-[12px] border-white border-[1px] border-solid outline-none text-white;
+    .footer .newsletter .gform_wrapper .gform_body input,
+    .footer .newsletter .gform_wrapper .gform_body textarea {
+        @apply block resize-none text-white text-18 leading-[120%] font-primary font-400 tracking-15 w-full bg-transparent sm:py-[25px] sm:px-[30px] py-[12px] px-[15px] border-white border-opacity-50 border-l-0 border-t-0 border-r-0 border-b-[1px] border-solid outline-none duration-300 delay-150 ease-linear;
     }   
-    .footer .newsletter .gform_wrapper .gform-body input::placeholder {
-        @apply text-white;
+    .footer .newsletter .gform_wrapper .gform_body input:focus,
+    .footer .newsletter .gform_wrapper .gform_body textarea:focus {
+        @apply border-opacity-100
     }
-    .footer .newsletter .gform_wrapper .gform_footer {
-        @apply my-0 py-0 ml-[18px] mobile:ml-0 mobile:mt-[15px] mobile_small:ml-0 mobile_small:mt-[15px];
+    .footer .newsletter .gform_wrapper .gform_body input::placeholder,
+    .footer .newsletter .gform_wrapper .gform_body textarea::placeholder {
+        @apply text-white text-opacity-50 uppercase;
     }
-    .footer .newsletter .gform_wrapper .gform_footer input {
-        @apply relative border-[1px] border-solid sm:py-[12px] py-[8px] px-30 bg-transparent border-white text-white uppercase cursor-pointer mobile:w-full mobile_small:w-full text-14 mb-0;
-    }
-    .footer .newsletter .gform_wrapper .gform_footer input:hover {
-        @apply bg-white border-white;
-    }
-    .footer .newsletter .gform_wrapper .gform_footer input:hover:before {
-        @apply duration-300 ease-linear delay-150 w-[60px];
-    }
-    .footer .newsletter .rotate__reduce-icon {
-        @apply rotate-180;
+
+    .footer .footer-pattern {
+        @apply bg-[url('./../../images/footer-pattern.png')] bg-cover bg-no-repeat bg-center bg-fixed
     }
     .footer-bottom {
-        @apply block w-full relative m-0 xl:pt-[50px] pb-40 xl:pb-100 p-0;
+        @apply block w-full relative m-0 lg:py-80 md:py-80 py-40 p-0;
     }
     .footer-left {
-        @apply flex flex-col items-center justify-start m-0 p-0 relative gap-6 xl:flex-212;
+        @apply flex flex-col items-center justify-start m-0 p-0 relative gap-6;
     }
     .footer-social-media {
         @apply flex flex-wrap items-center justify-center m-0 p-0 w-full relative list-none gap-4;
@@ -331,40 +314,28 @@
         @apply flex flex-wrap gap-x-10 gap-y-4 items-start lg:justify-center m-0 p-0 relative xl:flex-1;
     }
     .footer-menu ul {
-        @apply flex flex-col items-start justify-center m-0 p-0 list-none;
+        @apply flex flex-wrap xl:gap-[120px] lg:gap-[60px] md:gap-10 gap-5 items-center justify-center m-0 p-0 list-none;
     }
     .footer-menu ul li {
-        @apply flex flex-col m-0 p-0 relative my-[8px] first:mt-0 last:mb-0;
+        @apply flex flex-col m-0 p-0 relative;
     }
     .footer-menu ul li a {
-        @apply mobile_extra_small:text-12 text-16 font-primary font-500 not-italic leading-22 tracking-15 m-0 p-0 no-underline uppercase hover:underline duration-300 ease-linear delay-150;
+        @apply text-white text-18 font-primary font-400 not-italic leading-[120%] tracking-10 m-0 p-0 no-underline uppercase hover:text-opacity-50 duration-300 ease-linear delay-150;
     }
-    .footer-right {
-        @apply flex flex-col items-center text-center xl:text-right xl:items-end justify-start m-0 p-0 relative gap-6 xl:flex-196;
+    .socialmedia ul {
+        @apply flex flex-wrap gap-5 items-center justify-center m-0 p-0 list-none;
     }
-    .footer-right .btn-custom .btn {
-        @apply w-[196px] justify-center
+    .socialmedia ul li a {
+        @apply bg-black100 bg-social-gradient flex flex-col justify-center items-center rounded-50 w-[36px] lg:w-[72px] lg:h-[72px] h-[36px] duration-300 delay-150 ease-linear;
     }
-    .footer-right .footer-contact {
-        @apply block relative m-0 p-0 w-full
+    .socialmedia ul li a:hover {
+        @apply bg-white bg-opacity-30;
     }
-    .footer-right .footer-contact p {
-        @apply text-14 leading-22 m-0 p-0 font-primary font-400 tracking-5 not-italic capitalize
+    .socialmedia ul li a img {
+        @apply lg:w-[28px] lg:h-[28px] w-[14px] h-[14px]
     }
-    .footer-right .footer-contact a {
-        @apply text-14 leading-22 m-0 p-0 font-primary font-400 tracking-5 not-italic no-underline hover:underline duration-300 ease-linear delay-150
-    }
-    .footer .footer-bottom-menu {
-        @apply flex flex-col items-center justify-center m-0 p-0 relative w-full
-    }
-    .footer .footer-bottom-menu ul {
-        @apply flex flex-wrap m-0 p-0 relative list-none divide-x divide-y-0 divide-solid divide-opacity-60;
-    }
-    .footer .footer-bottom-menu ul li {
-        @apply px-10 text-center flex flex-col
-    }
-    .footer .footer-bottom-menu ul li a {
-        @apply text-12 leading-[1] m-0 p-0 font-primary font-400 tracking-8 capitalize not-italic opacity-60 no-underline hover:opacity-100 hover:underline duration-300 ease-linear delay-150
+    .footer-copyright p {
+        @apply font-primary font-400 text-16 leading-36 -tracking-1 text-white m-0 p-0;
     }
     /* Footer css end */
 }

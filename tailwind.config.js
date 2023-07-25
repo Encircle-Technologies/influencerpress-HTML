@@ -29,6 +29,8 @@ module.exports = {
             transparent: 'transparent',
             white: '#ffffff',
             black: '#000000',
+            black100: '#111111',
+            darkgray: '#080808',
         },
         shadows: {
             
@@ -103,6 +105,7 @@ module.exports = {
             'minus-15': '-15px',
         },
         letterSpacing: {
+            '1': '0.01em',
             '4': '0.04em',
             '5': '0.05em',
             '6': '0.06em',
@@ -198,6 +201,7 @@ module.exports = {
             none: 'none',
             'header-gradient': 'linear-gradient(180deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 62.07%)',
             'box-gradient': 'linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4))',
+            'social-gradient': 'linear-gradient(128deg, rgba(1, 1, 1, 0.6), rgba(1, 1, 1, 0))',
         }),
         borderRadius: {
             none: '0',
@@ -310,6 +314,7 @@ module.exports = {
             screens: {
                 xl: { 'min': '1200px' },
                 xlscreen: { 'max': '1199.9px' },
+                lgscreen: { 'max': '1023px' },
                 tablet_big: {'raw': '(max-width: 1199px) and (min-width: 1024px)'},
                 tablet: {'raw': '(max-width: 1023px) and (min-width: 768px)'}, 
                 mobile: {'raw': '(max-width: 767px) and (min-width: 576px)'},
