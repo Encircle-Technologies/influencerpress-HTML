@@ -17,38 +17,40 @@
     <!-- Header Start -->
     <header class="header absolute top-0 left-0 w-full pt-30 pb-0 z-99">
         <div class="container-fluid relative z-1">
-            <div class="flex flex-wrap justify-between items-center">
-                <div class="logo order-2">
-                    <a href="#">
-                        <img src="../assets/images/logo.png" alt="Logo">
-                    </a>
-                </div>
-                
-                <div class="navbar order-1">
-                    <button class="navbar-toggler bg-transparent border-0 flex flex-col gap-y-4 order-1 p-0 lg:w-[207px] cursor-pointer" type="button">
-                        <span></span>
-                        <span></span>
-                    </button>
-                    <div class="mobile-menu-main order-2">
-                        <div class="mobile-menu-main__inner">
-                            <div class="menu-main-menu-container">
-                                <ul id="menu-main-menu" class="flex flex-col gap-10 items-center justify-center">
-                                    <li>
-                                        <a href="index.html">
-                                            Home
-                                        </a>                            
-                                    </li>
-                                    <li><a href="#">About Us</a></li>
-                                    <li><a href="#">Program</a></li>
-                                    <li><a href="#">Results</a></li>
-                                    <li><a href="#">Apply</a></li>
-                                </ul>
+            <div class="w-full lg:w-11/12 mx-auto">
+                <div class="flex flex-wrap justify-between items-center">
+                    <div class="logo order-2">
+                        <a href="#">
+                            <img src="../assets/images/logo.png" alt="Logo">
+                        </a>
+                    </div>
+                    
+                    <div class="navbar order-1">
+                        <button class="navbar-toggler bg-transparent border-0 flex flex-col gap-y-4 order-1 p-0 lg:w-[207px] cursor-pointer" type="button">
+                            <span></span>
+                            <span></span>
+                        </button>
+                        <div class="mobile-menu-main order-2">
+                            <div class="mobile-menu-main__inner">
+                                <div class="menu-main-menu-container">
+                                    <ul id="menu-main-menu" class="flex flex-col gap-7 lg:gap-10 items-center justify-center">
+                                        <li>
+                                            <a href="index.html">
+                                                Home
+                                            </a>                            
+                                        </li>
+                                        <li><a href="#">About Us</a></li>
+                                        <li><a href="#">Program</a></li>
+                                        <li><a href="#">Results</a></li>
+                                        <li><a href="#">Apply</a></li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="btn-custom block order-3">
-                    <a href="#" class="btn btn-b-white">Book now</a>
+                    <div class="btn-custom block order-3">
+                        <a href="#" class="btn btn-b-white">Book now</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -57,31 +59,423 @@
 
     <section class="banner h-screen">
         <div class="banner-img relative w-full h-full" style="background-image:url('../assets/images/banner-bg.jpg')">
-            <div class="flex flex-col justify-center items-center h-full relative z-1 py-75">
-                <div class="banner-content mt-auto mb-[150px]">
-                    <div class="title title_white capitalize text-center mb-40 lg:mb-60">
-                        <h1 class="text-38 leading-[48px] xl:text-78 xl:leading-[120%] -tracking-6">
-                            Influencing Purchasing Decisions
-                            <span>
-                                At Scale
-                            </span>
-                        </h1>
+            <div class="container-fluid h-full">
+                <div class="flex flex-col justify-center items-center h-full relative z-1 py-75">
+                    <div class="banner-content mt-auto mb-[150px]">
+                        <div class="title title_white capitalize text-center mb-40 lg:mb-60">
+                            <h1 class="text-38 leading-[48px] xl:text-78 xl:leading-[120%] -tracking-6">
+                                Influencing Purchasing Decisions
+                                <span>
+                                    At Scale
+                                </span>
+                            </h1>
+                        </div>
+                        <div class="btn-custom justify-center order-3">
+                            <a href="#" class="btn btn-white">Book a discovery call</a>
+                        </div>
                     </div>
-                    <div class="btn-custom justify-center order-3">
-                        <a href="#" class="btn btn-white">Book a discovery call</a>
-                    </div>
+                    <a href="#down" class="circle">
+                        <div class="arrow">
+                            <img src="../assets/images/arrow-down.png" alt="arrow down">
+                        </div>
+                        <div class="text">
+                            <p>•scroll down•scroll down</p>
+                        </div>
+                    </a>
                 </div>
-                <a href="#" class="circle">
-                    <div class="arrow">
-                        <img src="../assets/images/arrow-down.png" alt="arrow down">
-                    </div>
-                    <div class="text">
-                        <p>•scroll down•scroll down</p>
-                    </div>
-                </a>
             </div>
         </div>
-    </section>    
+    </section>
+    
+    <section id="down" class="featured bg-black100 bg-pattern lg:py-100 md:py-60 py-40 relative overflow-hidden z-1">
+        <div class="container-fluid">
+            <div class="w-full lg:w-11/12 mx-auto">
+                <div class="flex flex-col justify-center items-center m-0 p-0 w-full">
+                    <div class="title title_white text-center m-0 lg:mb-60 mb-40">
+                        <h3 class="text-24 leading-[30px] xl:text-50 xl:leading-[120%] -tracking-4">
+                            We’ve been featured on
+                            <span class="!-tracking-4">
+                                world-class publications
+                            </span>
+                        </h3>
+                    </div>
+                    <div class="flex flex-col gap-12 w-full m-0 p-0">
+                        <div class="feature-press flex flex-wrap items-center justify-center w-full m-0 p-0 gap-y-6 lg:gap-y-12">
+                            <div class="press">
+                                <img src="../assets/images/press1.png" alt="press">
+                            </div>
+                            <div class="press">
+                                <img src="../assets/images/press2.png" alt="press">
+                            </div>
+                            <div class="press">
+                                <img src="../assets/images/press3.png" alt="press">
+                            </div>
+                            <div class="press">
+                                <img src="../assets/images/press4.png" alt="press">
+                            </div>
+                            <div class="press">
+                                <img src="../assets/images/press5.png" alt="press">
+                            </div>
+                            <div class="press">
+                                <img src="../assets/images/press6.png" alt="press">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="featured-video relative block w-full h-[420px] lg:h-[788px] rounded-[10px] overflow-hidden lg:mt-60 mt-40">
+                        <!-- <video class="w-full h-full block object-cover" autoplay muted loop><source src="../assets/images/Teen-Worker-Killed-In-Accident.mp4" type="video/mp4"></video> -->
+                        <div class="img block w-full h-full">
+                            <img src="../assets/images/pazolinithumb-1838940.jpg" class="w-full h-full object-cover" alt="pazolinithumb-1838940">
+                        </div>
+                        <div class="absolute top-0 left-0 w-full h-full z-1">
+                            <div class="flex mobile_small:flex-col flex-wrap w-full h-full m-0 py-40 px-35 xl:px-70 xl:py-80 gap-5 lg:gap-0  mobile_small:justify-end mobile_small:items-start justify-between items-end">
+                                <div class="title title_white lg:flex-1 mobile_small:order-2 order-1">
+                                    <h4 class="text-20 leading-[30px] xl:text-40 xl:leading-[60px] -tracking-2 capitalize">
+                                        Behind Influencer Press<br/> Consistently Winning Awards
+                                    </h4>
+                                </div>
+                                <div class="logo invert opacity-50 lg:flex-1 mobile_small:order-1 order-2">
+                                    <img src="../assets/images/menjournal.png" class="lg:ml-auto" width="273" height="59" alt="men journal">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services bg-pattern xlscreen:flex xlscreen:flex-col xlscreen:items-center lg:pt-100 md:pt-60 pt-40 relative overflow-hidden z-1">
+        <div class="flex gap-12 m-0 p-0 lgscreen:items-center xl:absolute xl:top-0 xl:-right-[250px] w-full max-w-[1060px] xl:order-1 order-2 img-grid-parallax" data-speed="1.5">
+            <div class="flex flex-col gap-12 lg:mt-[112px]">
+                <div class="press">
+                    <img src="../assets/images/enterpreneur.jpg" width="430" height="385" alt="enterpreneur">
+                </div>
+                <div class="press">
+                    <img src="../assets/images/forbes.jpg" width="430" height="385" alt="forbes">
+                </div>
+            </div>
+            <div class="flex flex-col gap-12">
+                <div class="press">
+                    <img src="../assets/images/inc.jpg" width="430" height="385" alt="inc">
+                </div>
+                <div class="press">
+                    <img src="../assets/images/forbes2.jpg" width="430" height="385" alt="forbes2">
+                </div>
+                <div class="press">
+                    <img src="../assets/images/evertalk.jpg" width="430" height="385" alt="evertalk">
+                </div>
+                <div class="press">
+                    <img src="../assets/images/influencive.jpg" width="430" height="385" alt="influencive">
+                </div>
+            </div>
+            <div class="flex flex-col gap-12 lg:mt-[112px]">
+                <div class="press">
+                    <img src="../assets/images/jeff.jpg" width="430" height="385" alt="jeff">
+                </div>
+                <div class="press">
+                    <img src="../assets/images/insider.jpg" width="430" height="385" alt="insider">
+                </div>
+                <div class="press">
+                    <img src="../assets/images/josh.jpg" width="430" height="385" alt="josh">
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid xl:order-2 order-1">
+            <div class="w-full lg:w-11/12 mx-auto lg:mb-100 md:mb-60 mb-40">
+                <div class="flex flex-wrap items-center w-full m-0 p-0">
+                    <div class="w-full xl:w-7/12">
+                        <div class="title title_white mb-40 text-center xl:text-left">
+                            <h2 class="text-32 leading-[44px] xl:text-60 xl:leading-[72px] -tracking-4 mb-20">
+                                A proven system that compresses
+                                <span>
+                                    time to revenue goals
+                                </span>
+                            </h2>
+                            <h5 class="text-20 leading-[36px] xl:text-30 xl:leading-[45px] -tracking-2 opacity-50 !font-400 w-full xl:max-w-[685px]">
+                                Research has undisputedly shown that consumers decide what they think about your business, & if they’ll buy, before even interacting with you.
+                            </h5>
+                        </div>
+                        <div class="services-detail mb-40 last:mb-0">
+                            <div class="title title_white mb-10">
+                                <h5 class="text-20 leading-[36px] xl:text-30 xl:leading-[45px] -tracking-2">
+                                    Every touchpoint is a moment to preinfluence.
+                                </h5>
+                            </div>
+                            <div class="content big white">
+                                <p class="opacity-50 !-tracking-2 w-full max-w-[555px]">
+                                    Preinfleunce is the art and science of establishing buying beliefs, generating authority, creating systems of scale to get clients pre-sold before they even book a time to talk.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="services-detail mb-40 last:mb-0">
+                            <div class="title title_white mb-10">
+                                <h5 class="text-20 leading-[36px] xl:text-30 xl:leading-[45px] -tracking-2 capitalize">
+                                    Who We Are
+                                </h5>
+                            </div>
+                            <div class="content big white">
+                                <p class="opacity-50 !-tracking-2 w-full max-w-[572px]">
+                                    We are not marketing, where we celebrate because we get you leads that don’t convert. We aren’t a sales agency that focuses on putting pressure on sales/closers to do all the work to close the deals. We aren’t PR agents that just get you press.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hidden xl:block border-0 border-b-[1px] border-solid border-white border-opacity-20 w-full"></div>
+        </div>
+    </section>
+
+    <section class="one-liner lg:py-100 md:py-60 py-40">
+        <div class="container-fluid">
+            <div class="w-full lg:w-9/12 mx-auto">
+                <div class="title title_white text-center">
+                    <h3 class="text-24 leading-[54px] xl:text-[42px] xl:leading-[72px] !font-300 -tracking-4 italic">
+                        We integrate the best of science, marketing, sales & PR in a cohesive ecosystem that engineers the social trust of word of mouth.
+                        <span class="text-24 lg:text-[48px] not-italic">
+                            At Scale
+                        </span>
+                    </h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonial">
+        <div class="container-fluid">
+            <div class="w-full lg:w-11/12 mx-auto">
+                <div class="txt-shadow flex flex-wrap m-0 xl:h-[835px] xl:py-100 xl:px-90 md:px-45 md:py-50 p-30 w-full h-full rounded-[10px] relative overflow-hidden z-1">
+                    <div class="img absolute top-0 left-0 w-full h-full -z-1">
+                        <img src="../assets/images/testimonial-bg.jpg" class="w-full h-full object-cover" alt="testimonial">
+                    </div>
+                    <div class="w-full lg:w-9/12 relative z-1">
+                        <div class="title title_white mb-20 max-w-[710px]">
+                            <h2 class="text-30 leading-[50px] xl:text-[52px] xl:leading-[72px] !font-secondary !font-400 -tracking-6">
+                                “Influencer Press is the best. With their help we got millions of views that landed us on Forbes, Business Insider, TV & more.”
+                            </h2>
+                        </div>
+                        <div class="title title_white mb-20">
+                            <h3 class="text-20 leading-[30px] xl:text-[30px] xl:leading-[45px] -tracking-2 opacity-50">
+                                RTFKT soon after got acquired by Nike,<br/> one of the largest stories around NFT’s of 2021
+                            </h3>
+                        </div>
+                        <div class="title title_white">
+                            <h4 class="text-24 leading-[54px] xl:text-[42px] xl:leading-[75px] -tracking-4 capitalize">
+                                Steven Vasilev
+                            </h4>
+                        </div>
+                        <div class="content bigger white opacity-30 mb-20">
+                            <p>
+                                Co-Founder of RTFKT Studios <br/> Senior Director of Digital-Physical Product at Nike
+                            </p>
+                        </div>
+                        <div class="t-log">
+                            <img src="../assets/images/nike.png" width="131" height="48" class="invert opacity-50" alt="nike">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="client lg:py-100 md:py-60 py-40">
+        <div class="container-fluid">
+            <div class="title title_white text-center lg:mb-60 mb-40">
+                <h2 class="text-32 leading-[44px] xl:text-60 xl:leading-[72px] -tracking-4">
+                    World-class results
+                    <span>
+                        for world-class entrepreneurs
+                    </span>
+                </h2>
+            </div>
+        </div>
+        <div dir="rtl" class="swiper rtl client-slide mb-20">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="card relative rounded-[10px] overflow-hidden">
+                    <div class="img">
+                        <img src="../assets/images/bedros.png" alt="bedros">
+                    </div>
+                    <div class="overlay absolute top-0 left-0 w-full h-full">
+                        <div class="title title_white">
+                            <h3>
+                                <span>
+                                    Bedros Keuilian
+                                </span>
+                            </h3>
+                        </div>
+                        <div class="btn-custom">
+                            <a href="#" class="btn btn_link">
+                                <span>View story</span>
+                                <img src="../assets/images/arrow-r.png" width="16" height="16" alt="arrow">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card relative rounded-[10px] overflow-hidden">
+                    <div class="img">
+                        <img src="../assets/images/bedros.png" alt="bedros">
+                    </div>
+                    <div class="overlay absolute top-0 left-0 w-full h-full">
+                        <div class="title title_white">
+                            <h3>
+                                <span>
+                                    Bedros Keuilian
+                                </span>
+                            </h3>
+                        </div>
+                        <div class="btn-custom">
+                            <a href="#" class="btn btn_link">
+                                <span>View story</span>
+                                <img src="../assets/images/arrow-r.png" width="16" height="16" alt="arrow">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card relative rounded-[10px] overflow-hidden">
+                    <div class="img">
+                        <img src="../assets/images/bedros.png" alt="bedros">
+                    </div>
+                    <div class="overlay absolute top-0 left-0 w-full h-full">
+                        <div class="title title_white">
+                            <h3>
+                                <span>
+                                    Bedros Keuilian
+                                </span>
+                            </h3>
+                        </div>
+                        <div class="btn-custom">
+                            <a href="#" class="btn btn_link">
+                                <span>View story</span>
+                                <img src="../assets/images/arrow-r.png" width="16" height="16" alt="arrow">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card relative rounded-[10px] overflow-hidden">
+                    <div class="img">
+                        <img src="../assets/images/bedros.png" alt="bedros">
+                    </div>
+                    <div class="overlay absolute top-0 left-0 w-full h-full">
+                        <div class="title title_white">
+                            <h3>
+                                <span>
+                                    Bedros Keuilian
+                                </span>
+                            </h3>
+                        </div>
+                        <div class="btn-custom">
+                            <a href="#" class="btn btn_link">
+                                <span>View story</span>
+                                <img src="../assets/images/arrow-r.png" width="16" height="16" alt="arrow">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+        <div class="swiper client-slide ltr">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="card relative rounded-[10px] overflow-hidden">
+                    <div class="img">
+                        <img src="../assets/images/bedros.png" alt="bedros">
+                    </div>
+                    <div class="overlay absolute top-0 left-0 w-full h-full">
+                        <div class="title title_white">
+                            <h3>
+                                <span>
+                                    Bedros Keuilian
+                                </span>
+                            </h3>
+                        </div>
+                        <div class="btn-custom">
+                            <a href="#" class="btn btn_link">
+                                <span>View story</span>
+                                <img src="../assets/images/arrow-r.png" width="16" height="16" alt="arrow">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card relative rounded-[10px] overflow-hidden">
+                    <div class="img">
+                        <img src="../assets/images/bedros.png" alt="bedros">
+                    </div>
+                    <div class="overlay absolute top-0 left-0 w-full h-full">
+                        <div class="title title_white">
+                            <h3>
+                                <span>
+                                    Bedros Keuilian
+                                </span>
+                            </h3>
+                        </div>
+                        <div class="btn-custom">
+                            <a href="#" class="btn btn_link">
+                                <span>View story</span>
+                                <img src="../assets/images/arrow-r.png" width="16" height="16" alt="arrow">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card relative rounded-[10px] overflow-hidden">
+                    <div class="img">
+                        <img src="../assets/images/bedros.png" alt="bedros">
+                    </div>
+                    <div class="overlay absolute top-0 left-0 w-full h-full">
+                        <div class="title title_white">
+                            <h3>
+                                <span>
+                                    Bedros Keuilian
+                                </span>
+                            </h3>
+                        </div>
+                        <div class="btn-custom">
+                            <a href="#" class="btn btn_link">
+                                <span>View story</span>
+                                <img src="../assets/images/arrow-r.png" width="16" height="16" alt="arrow">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card relative rounded-[10px] overflow-hidden">
+                    <div class="img">
+                        <img src="../assets/images/bedros.png" alt="bedros">
+                    </div>
+                    <div class="overlay absolute top-0 left-0 w-full h-full">
+                        <div class="title title_white">
+                            <h3>
+                                <span>
+                                    Bedros Keuilian
+                                </span>
+                            </h3>
+                        </div>
+                        <div class="btn-custom">
+                            <a href="#" class="btn btn_link">
+                                <span>View story</span>
+                                <img src="../assets/images/arrow-r.png" width="16" height="16" alt="arrow">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
 
     <footer class="footer">
         <div class="bg-darkgray block relative">
@@ -91,7 +485,7 @@
                         <div class="title title_white text-center">
                             <h3 class="text-24 leading-[30px] xl:text-50 xl:leading-[120%] -tracking-4">
                                 Ready to step into the world 
-                                <span>
+                                <span class="!-tracking-4">
                                     of Pre-Influence?
                                 </span>
                             </h3>
@@ -213,6 +607,7 @@
 
 </body>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.9.0/rellax.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.4/swiper-bundle.min.js"></script>
 <script type="text/javascript" src="../assets/js/custom.js"></script>
 </html>
