@@ -46,7 +46,7 @@
         url('../fonts/Inter-ExtraBold.woff') format('woff'),
         url('../fonts/Inter-ExtraBold.ttf') format('truetype'),
         url('../fonts/Inter-ExtraBold.svg#Inter-ExtraBold') format('svg');
-    font-weight: bold;
+    font-weight: 800;
     font-style: normal;
     font-display: swap;
 }

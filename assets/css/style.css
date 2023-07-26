@@ -65,7 +65,7 @@
         @apply text-16 xl:text-22 leading-[110%];
     }
     .content.lg p {
-        @apply text-20 leading-36 -tracking-[0.4px] opacity-50;    
+        @apply text-20 leading-36 -tracking-2 opacity-50;    
       }
     img {
         @apply block max-w-full h-auto;
@@ -423,7 +423,7 @@
         filter: invert(1);
     }
     .featured .press {
-        @apply flex-inherit lg:px-[52px] md:px-[26px] px-[13px] opacity-50 hover:opacity-100 duration-300 delay-150 ease-linear;
+        @apply flex items-center justify-center lg:px-[0] md:px-[36px] px-[20px] lg:flex-[22%] lg:max-w-[22%] tablet:flex-[33.333%] tablet:max-w-[33.333%] mobile:flex-[33.333%] opacity-50 hover:opacity-100 duration-300 delay-150 ease-linear;
     }
     .featured .press img {
         @apply max-w-full h-auto block;
@@ -479,6 +479,9 @@
     /* featured end */
 
     /* Services Start*/
+    .services .img-grid-parallax {
+        @apply -rotate-[30deg]
+    }
     .services.bg-pattern:before {
         content: "";
         @apply absolute top-0 left-0 w-full h-full bg-[url('./../../images/service-pattern.png')] bg-[length:100%] bg-no-repeat bg-center bg-fixed opacity-[0.05] -z-1;
@@ -502,7 +505,7 @@
 
     /* Clients Start */
     .client-slide .swiper-slide {
-        @apply !w-[506px];
+        @apply lg:!w-[506px];
     }
     .client-slide .card {
         @apply block relative m-0 p-0 w-full;
@@ -524,6 +527,50 @@
         @apply text-24 leading-[28px] xl:text-[48px] xl:leading-[52px] -tracking-6;
     }
     /* Client End */
+
+    /* Process Start */
+    .process-step {
+        @apply flex flex-wrap lg:gap-[60px] m-0 p-0 w-full items-start justify-center gap-y-10;
+    }
+    .process-step li {
+        @apply flex-50 lg:flex-auto flex-col gap-5 justify-center items-center flex text-center duration-300 delay-150 ease-linear;
+    }
+    .process-step li .stat {
+        @apply bg-black100 bg-social-gradient flex flex-wrap justify-center items-center rounded-50 w-[80px] h-[80px] xl:w-[160px] xl:h-[160px] duration-500 delay-200 ease-linear;
+    }
+    .process-step li:hover .stat {
+        @apply bg-social-gradient_h duration-500 delay-200 ease-linear
+    }
+    .process-step li .stat h3 {
+        @apply text-32 leading-[44px] xl:text-60 xl:leading-[120%] -tracking-2 font-200;
+    }
+    .process-step li .stat span {
+        @apply text-14 leading-[26px] xl:text-[28px] xl:leading-[120%] -tracking-2 font-200 capitalize;
+    }
+    .process-step li h5 {
+        @apply text-18 leading-[120%] xl:text-30 xl:leading-41 -tracking-2 font-400;
+    }
+    .process-slider:after {
+        content: "";
+        @apply absolute bottom-0 left-0 w-full h-[333px] bg-[url('./../../images/process-gradient.png')] bg-cover bg-repeat-x z-1;
+    }
+    .process-slider .swiper-slide {
+        @apply lg:!w-[432px] lg:translate-y-[145px];
+    }
+    /* Process End */
+
+    /* Phase Start */
+    .video_overlay:after {
+        content: "";
+        @apply absolute top-0 left-0 w-full h-full bg-black100 bg-opacity-20 z-1;
+    }
+    .play-button-wrapper {
+        @apply absolute inset-0 flex items-center justify-center w-full h-auto pointer-events-none z-[2]
+    }
+    .play-button-wrapper .circle-play-b {
+        @apply cursor-pointer pointer-events-auto;
+    }
+    /* Phase End */
 
 
     /* About us Start */

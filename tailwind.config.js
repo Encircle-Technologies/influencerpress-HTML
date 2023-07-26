@@ -24,12 +24,14 @@ module.exports = {
             '212': '0 0 212px',
             '37': '0 0 37.3%',
             '60': '0 0 60%',
+            '50': '0 0 50%',
         },
         colors: {
             transparent: 'transparent',
             white: '#ffffff',
             black: '#000000',
             black100: '#111111',
+            black200: '#010101',
             darkgray: '#080808',
         },
         shadows: {
@@ -113,6 +115,7 @@ module.exports = {
             '8': '0.08em',            
             '10': '0.1em',         
             '15': '0.15em',
+            '30': '0.3em',
             '47': '0.47em',
         },
         fontSize: {
@@ -204,6 +207,7 @@ module.exports = {
             'header-gradient': 'linear-gradient(180deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 62.07%)',
             'box-gradient': 'linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4))',
             'social-gradient': 'linear-gradient(128deg, rgba(1, 1, 1, 0.6), rgba(1, 1, 1, 0))',
+            'social-gradient_h': 'linear-gradient(128deg, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0))',
             'gradient2': 'linear-gradient(0deg, rgba(0,0,0,1) 10%, rgba(0,0,0,0) 100%)',
             'gradient3': 'linear-gradient(90deg, rgba(17,17,17,1) 30%, rgba(17,17,17,0) 80%)',
             'gradient3_res': 'linear-gradient(90deg, rgba(17,17,17,1) 50%, rgba(17,17,17,0) 100%)',
@@ -225,9 +229,6 @@ module.exports = {
             0: '0px',
             'minus_50': '-50%',
         },
-        transitionProperty: {
-            
-        },
         keyframes: {
             stickySlideDown: {
                 '0%': { transform: 'translateY(-100%)', opacity: '0.7' },
@@ -248,21 +249,14 @@ module.exports = {
         blur: {
             10: '10px',
         },
-        brightness: {
-
-        },
         borderWidth: {
             DEFAULT: '1px',
             0.8: '0.8px',  
             2: '2px',
             0: '0px',
         },
-        scale: {
-            
-        },
         boxShadow: {
-            none: 'none',
-            
+            none: 'none',            
         },
         dropShadow: {
             none: 'none',  
@@ -271,13 +265,6 @@ module.exports = {
         outline: {
             none: 'none',
         },
-        ringOffsetWidth: {},
-        ringWidth: {},
-        saturate: {},
-        sepia: {},
-        skew: {},
-        strokeWidth: {},
-        transformOrigin: {},
         extend: {
             backdropBlur: {
                 sm: '4px',
@@ -307,15 +294,6 @@ module.exports = {
             },
             minHeight: {
                 auto: 'auto',
-            },
-            gap: {
-                
-            },
-            backgroundOpacity: {
-                
-            },
-            maxHeight: {
-                
             },
             screens: {
                 desktop2: { max: '1600px' },
@@ -352,7 +330,7 @@ module.exports = {
                         maxWidth: '768px',
                     },
                     '@screen lg': {
-                        maxWidth: '940px',
+                        maxWidth: '1024px',
                     },
                     '@screen xl': {
                         maxWidth: '1140px',
@@ -373,7 +351,7 @@ module.exports = {
                         maxWidth: '768px',
                     },
                     '@screen lg': {
-                        maxWidth: '940px',
+                        maxWidth: '1024px',
                     },
                     '@screen xl': {
                         maxWidth: '1140px',

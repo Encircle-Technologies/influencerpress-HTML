@@ -47,7 +47,7 @@ $(document).ready(function () {
   textC.innerHTML = textC.innerText
   .split("")
   .map(
-      (char, i) => `<span style="transform:rotate(${i * 17.3}deg)">${char}</span>`
+      (char, i) => `<span style="transform:rotate(${i * 16}deg)">${char}</span>`
   )
   .join("");
 });
@@ -69,74 +69,78 @@ $(document).ready(function() {
 
 // parallax Start
 $(document).ready(function() {
-    $('.img-grid-parallax').each(function(){
-        var img = $(this);
-        var imgParent = $(this).parent();
-        function parallaxImg () {
-          var speed = img.data('speed');
-          var imgY = imgParent.offset().top;
-          var winY = $(this).scrollTop();
-          var winH = $(this).height();
-          var parentH = imgParent.innerHeight();
-      
-      
-          var winBottom = winY + winH;
-      
-          // If block is shown on screen
-          if (winBottom > imgY && winY < imgY + parentH) {
-            var imgBottom = ((winBottom - imgY) * speed);
-            var imgTop = winH + parentH;
-            var imgPercent = ((imgBottom / imgTop) * 100) + (10 - (speed * 30));
+  $(window).on('resize', function(){
+    var $theWindowSize = $(this).width();
+    if($theWindowSize < 1200) {
+      $('.img-grid-parallax').each(function(){
+          var img = $(this);
+          var imgParent = $(this).parent();
+          function parallaxImg () {
+            var speed = img.data('speed');
+            var imgY = imgParent.offset().top;
+            var winY = $(this).scrollTop();
+            var winH = $(this).height();
+            var parentH = imgParent.innerHeight();
+        
+        
+            var winBottom = winY + winH;
+        
+            // If block is shown on screen
+            if (winBottom > imgY && winY < imgY + parentH) {
+              var imgBottom = ((winBottom - imgY) * speed);
+              var imgTop = winH + parentH;
+              var imgPercent = ((imgBottom / imgTop) * 100) + (10 - (speed * 30));
+            }
+            img.css({
+              transform: 'translate(0, ' + imgPercent + 'px) rotate(-30deg)'
+            });
           }
-          img.css({
-            transform: 'translate(0, ' + imgPercent + 'px) rotate(-30deg)'
+          $(document).on({
+            scroll: function () {
+              parallaxImg();
+            }, ready: function () {
+              parallaxImg();
+            }
           });
+      });
+    } 
+  });
+  $('.img-parallax').each(function(){
+      var img1 = $(this);
+      var imgParent1 = $(this).parent();
+      function parallaxImg () {
+        var speed1 = img1.data('speed');
+        var imgY1 = imgParent1.offset().top;
+        var winY1 = $(this).scrollTop();
+        var winH1 = $(this).height();
+        var parentH1 = imgParent1.innerHeight();
+    
+    
+        var winBottom = winY1 + winH1;
+    
+        // If block is shown on screen
+        if (winBottom > imgY1 && winY1 < imgY1 + parentH1) {
+          var imgBottom1 = ((winBottom - imgY1) * speed1);
+          var imgTop1 = winH1 + parentH1;
+          var imgPercent1 = ((imgBottom1 / imgTop1) * 100) + (1 - (speed1 * 10));
         }
-        $(document).on({
-          scroll: function () {
-            parallaxImg();
-          }, ready: function () {
-            parallaxImg();
-          }
+        img1.css({
+          transform: 'translate(0, ' + imgPercent1 + 'px)'
         });
-    });
-
-    $('.img-parallax').each(function(){
-        var img1 = $(this);
-        var imgParent1 = $(this).parent();
-        function parallaxImg () {
-          var speed1 = img1.data('speed');
-          var imgY1 = imgParent1.offset().top;
-          var winY1 = $(this).scrollTop();
-          var winH1 = $(this).height();
-          var parentH1 = imgParent1.innerHeight();
-      
-      
-          var winBottom = winY1 + winH1;
-      
-          // If block is shown on screen
-          if (winBottom > imgY1 && winY1 < imgY1 + parentH1) {
-            var imgBottom1 = ((winBottom - imgY1) * speed1);
-            var imgTop1 = winH1 + parentH1;
-            var imgPercent1 = ((imgBottom1 / imgTop1) * 100) + (1 - (speed1 * 10));
-          }
-          img1.css({
-            transform: 'translate(0, ' + imgPercent1 + 'px)'
-          });
+      }
+      $(document).on({
+        scroll: function () {
+          parallaxImg();
+        }, ready: function () {
+          parallaxImg();
         }
-        $(document).on({
-          scroll: function () {
-            parallaxImg();
-          }, ready: function () {
-            parallaxImg();
-          }
-        });
-    });
+      });
+  });
 });
 // parallax End
 
 // client slider start
-$(document).ready(function() {
+$(document).ready(function($) {
   var rtlswiper = new Swiper(".rtl", {
       loop: true,
       slidesPerView: 3.5,
@@ -160,14 +164,13 @@ $(document).ready(function() {
   $(".rtl").mouseenter(function() {
     rtlswiper.autoplay.stop();
   });
-
   $(".rtl").mouseleave(function() {
     rtlswiper.autoplay.start();
   });
+
   $(".ltr").mouseenter(function() {
     ltrswiper.autoplay.stop();
   });
-
   $(".ltr").mouseleave(function() {
     ltrswiper.autoplay.start();
   });
@@ -182,10 +185,33 @@ $(document).ready(function() {
         delay: 1000,
         disableOnInteraction: true,
     },
-    navigation: {
-        nextEl: ".modal-button-next",
-        prevEl: ".modal-button-prev",
+  });
+
+  var processswiper = new Swiper(".process-slider", {
+    loop: true,
+    slidesPerView: 3.6,
+    spaceBetween: 140,
+    centeredSlides: false,
+    speed: 1500,
+    autoplay: {
+        delay: 0,
     },
   });
+
 });
 // client slider end
+
+// video play Start
+jQuery(document).ready(function ($) {
+  if ($('.video_overlay').length) {
+      $('.video').parent().click(function () {
+          if ($(this).children(".video").get(0).paused) {
+              $(this).children(".video").get(0).play();
+              $(this).parent().find('.circle-play-b').hide();
+          } else {
+              $(this).children(".video").get(0).pause();
+              $(this).parent().find('.circle-play-b').show();
+          }
+      });
+  }
+});
