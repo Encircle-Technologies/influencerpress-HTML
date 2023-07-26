@@ -127,24 +127,40 @@ $(document).ready(function() {
 // parallax End
 
 // client slider start
-var swiper = new Swiper(".rtl", {
+$(document).ready(function() {
+var rtlswiper = new Swiper(".rtl", {
     loop: true,
-    slidesPerView: 4,
+    slidesPerView: 3.5,
     spaceBetween: 22,
-    speed: 4000,
-    centeredSlides: true,
+    speed: 2000,
+    // centeredSlides: true,
     autoplay: {
-        delay: 2500,
+        delay: 1500,
     },
 });
-var swiper = new Swiper(".ltr", {
+var ltrswiper = new Swiper(".ltr", {
     loop: true,
     slidesPerView: 4,
     spaceBetween: 22,
     // centeredSlides: true,
-    speed: 4000,
+    speed: 2000,
     autoplay: {
-        delay: 2500,
+        delay: 1500,
     },
+});
+$(".rtl").mouseenter(function() {
+  rtlswiper.autoplay.stop();
+});
+
+$(".rtl").mouseleave(function() {
+  rtlswiper.autoplay.start();
+});
+$(".ltr").mouseenter(function() {
+  ltrswiper.autoplay.stop();
+});
+
+$(".ltr").mouseleave(function() {
+  ltrswiper.autoplay.start();
+});
 });
 // client slider end

@@ -129,7 +129,7 @@
         @apply outline-0 shadow-none;
     }
     .btn-custom {
-        @apply flex flex-wrap items-center space-x-5 gap-y-4;
+        @apply flex flex-wrap items-center gap-5 md:gap-10;
     }
     .btn-custom .btn-white-small {
         @apply flex flex-wrap items-center m-0 p-0 gap-x-6 text-white opacity-100 text-12 leading-16 tracking-8 font-primary font-800 uppercase no-underline duration-300 ease-linear delay-150;
@@ -153,6 +153,26 @@
     }
     .btn-custom .btn-white:hover {
         @apply border-white text-white bg-transparent;
+    }
+
+    .btn_link {
+        @apply flex flex-wrap items-center m-0 p-0 gap-3 no-underline;
+    }
+    .btn_link span {
+        @apply text-white text-18 leading-[150%] font-primary font-700 uppercase tracking-15 relative;
+    }
+    .btn_link span:after {
+        content: "";
+        @apply absolute bottom-0 right-0 w-0 h-[1px] bg-white duration-500 delay-200 ease-linear;
+    }
+    .btn_link:hover span:after {
+        @apply left-0 w-full;
+    }
+    .btn_link img {
+        @apply invert duration-300 delay-150 ease-linear;
+    }
+    .btn_link:hover img {
+        @apply rotate-45;
     }
     /* button css end*/
 
@@ -447,4 +467,29 @@
         @apply ml-[18.5%];
     }
     /* testimonial End */
+
+    /* Clients Start */
+    .client-slide .swiper-slide {
+        @apply !w-[506px];
+    }
+    .client-slide .card {
+        @apply block relative m-0 p-0 w-full;
+    }
+    .client-slide .card .img {
+        @apply relative overflow-hidden;
+    }
+    .client-slide .card .img:after {
+        content: "";
+        @apply absolute top-0 left-0 w-full h-full max-h-[224px] bg-gradient4;
+    }
+    .client-slide .card .overlay {
+        @apply md:p-40 p-30 text-left;
+    }
+    .client-slide .card .overlay .title {
+        @apply mb-10
+    }
+    .client-slide .card .overlay .title h3 {
+        @apply text-24 leading-[28px] xl:text-[48px] xl:leading-[52px] -tracking-6;
+    }
+    /* Client End */
 }
