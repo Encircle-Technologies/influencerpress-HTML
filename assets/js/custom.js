@@ -34,14 +34,23 @@ $(document).ready(function() {
 
 // Circle Start
 $(document).ready(function () {
-    const text = document.querySelector(".text");
+    var text = document.querySelector(".text");
     text.innerHTML = text.innerText
-        .split("")
-        .map(
-            (char, i) => `<span style="transform:rotate(${i * 14.7}deg)">${char}</span>`
-        )
-        .join("");
-    });
+    .split("")
+    .map(
+        (char, i) => `<span style="transform:rotate(${i * 14.7}deg)">${char}</span>`
+    )
+    .join("");
+});
+$(document).ready(function () {
+  var textC = document.querySelector(".text-c");
+  textC.innerHTML = textC.innerText
+  .split("")
+  .map(
+      (char, i) => `<span style="transform:rotate(${i * 17.3}deg)">${char}</span>`
+  )
+  .join("");
+});
 // Circle End
 
 // Modal Start
@@ -128,39 +137,55 @@ $(document).ready(function() {
 
 // client slider start
 $(document).ready(function() {
-var rtlswiper = new Swiper(".rtl", {
-    loop: true,
-    slidesPerView: 3.5,
-    spaceBetween: 22,
-    speed: 2000,
-    // centeredSlides: true,
-    autoplay: {
-        delay: 1500,
-    },
-});
-var ltrswiper = new Swiper(".ltr", {
-    loop: true,
-    slidesPerView: 4,
-    spaceBetween: 22,
-    // centeredSlides: true,
-    speed: 2000,
-    autoplay: {
-        delay: 1500,
-    },
-});
-$(".rtl").mouseenter(function() {
-  rtlswiper.autoplay.stop();
-});
+  var rtlswiper = new Swiper(".rtl", {
+      loop: true,
+      slidesPerView: 3.5,
+      spaceBetween: 22,
+      speed: 2000,
+      // centeredSlides: true,
+      autoplay: {
+          delay: 1500,
+      },
+  });
+  var ltrswiper = new Swiper(".ltr", {
+      loop: true,
+      slidesPerView: 4,
+      spaceBetween: 22,
+      // centeredSlides: true,
+      speed: 2000,
+      autoplay: {
+          delay: 1500,
+      },
+  });
+  $(".rtl").mouseenter(function() {
+    rtlswiper.autoplay.stop();
+  });
 
-$(".rtl").mouseleave(function() {
-  rtlswiper.autoplay.start();
-});
-$(".ltr").mouseenter(function() {
-  ltrswiper.autoplay.stop();
-});
+  $(".rtl").mouseleave(function() {
+    rtlswiper.autoplay.start();
+  });
+  $(".ltr").mouseenter(function() {
+    ltrswiper.autoplay.stop();
+  });
 
-$(".ltr").mouseleave(function() {
-  ltrswiper.autoplay.start();
-});
+  $(".ltr").mouseleave(function() {
+    ltrswiper.autoplay.start();
+  });
+
+  const imgslider = new Swiper(".img-slider-inner", {
+    loop: true,
+    centeredSlides: true,
+    slidesPerView: 2.2,
+    spaceBetween: 40,
+    speed: 1500,
+    autoplay: {
+        delay: 1000,
+        disableOnInteraction: true,
+    },
+    navigation: {
+        nextEl: ".modal-button-next",
+        prevEl: ".modal-button-prev",
+    },
+  });
 });
 // client slider end

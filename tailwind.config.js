@@ -318,10 +318,12 @@ module.exports = {
                 
             },
             screens: {
+                desktop2: { max: '1600px' },
                 xl: { 'min': '1200px' },
                 xlscreen: { 'max': '1199.9px' },
                 lgscreen: { 'max': '1023px' },
-                mdscreen: { 'max': '767px' },
+                ipad: { max: '991px' },
+                mdscreen: { 'max': '767px' },                
                 tablet_big: {'raw': '(max-width: 1199px) and (min-width: 1024px)'},
                 tablet: {'raw': '(max-width: 1023px) and (min-width: 768px)'}, 
                 mobile: {'raw': '(max-width: 767px) and (min-width: 576px)'},
