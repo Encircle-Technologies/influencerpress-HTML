@@ -32,26 +32,26 @@ $(document).ready(function() {
     });
 // Menu End
 
-// Circle Start
-// $(document).ready(function () {
-//     var text = document.querySelector(".text");
-//     text.innerHTML = text.innerText
-//     .split("")
-//     .map(
-//         (char, i) => `<span style="transform:rotate(${i * 14.7}deg)">${char}</span>`
-//     )
-//     .join("");
-// });
-// $(document).ready(function () {
-//   var textC = document.querySelector(".text-c");
-//   textC.innerHTML = textC.innerText
-//   .split("")
-//   .map(
-//       (char, i) => `<span style="transform:rotate(${i * 16}deg)">${char}</span>`
-//   )
-//   .join("");
-// });
-// Circle End
+//Circle Start
+$(document).ready(function () {
+    var text = document.querySelector(".text");
+    text.innerHTML = text.innerText
+    .split("")
+    .map(
+        (char, i) => `<span style="transform:rotate(${i * 14.7}deg)">${char}</span>`
+    )
+    .join("");
+});
+$(document).ready(function () {
+  var textC = document.querySelector(".text-c");
+  textC.innerHTML = textC.innerText
+  .split("")
+  .map(
+      (char, i) => `<span style="transform:rotate(${i * 16}deg)">${char}</span>`
+  )
+  .join("");
+});
+//Circle End
 
 // Modal Start
 $(document).ready(function() {
@@ -139,7 +139,7 @@ $(document).ready(function() {
 });
 // parallax End
 
-// client slider start
+// slider start
 $(document).ready(function($) {
   var rtlswiper = new Swiper(".rtl", {
       loop: true,
@@ -322,18 +322,36 @@ $(document).ready(function($) {
   });
 
   var processswiper = new Swiper(".process-slider", {
-    loop: true,
+    loop: true,   
     slidesPerView: 3.6,
-    spaceBetween: 140,
+    spaceBetween: 140,  
     centeredSlides: false,
     speed: 1500,
     autoplay: {
         delay: 0,
     },
+    breakpoints: {
+      320: {
+        slidesPerView: 1.6,
+        spaceBetween: 90,
+      },
+      640: {
+        slidesPerView: 2,
+        spaceBetween: 90,
+      },
+      768: {
+        slidesPerView: 2.6,
+        spaceBetween: 70,
+      },
+      1024: {
+        slidesPerView: 3.6,
+        spaceBetween: 140,
+      },
+    },
   });
 
 });
-// client slider end
+// slider end
 
 // video play Start
 jQuery(document).ready(function ($) {
@@ -349,3 +367,15 @@ jQuery(document).ready(function ($) {
       });
   }
 });
+// video play End
+
+// accordion Start
+$(function () {
+  $(".accordion-content:not(:first-of-type)").css("display", "none");
+  $(".js-accordion-title:first-of-type").addClass("open"); 
+  $(".js-accordion-title").click(function () {
+    $(".open").not(this).removeClass("open").next().slideUp(300);
+    $(this).toggleClass("open").next().slideToggle(300);
+  });
+});
+// accordion End

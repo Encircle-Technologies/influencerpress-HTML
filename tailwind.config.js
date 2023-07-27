@@ -32,6 +32,7 @@ module.exports = {
             black: '#000000',
             black100: '#111111',
             black200: '#010101',
+            black300: '#101010',
             darkgray: '#080808',
         },
         shadows: {
@@ -307,6 +308,7 @@ module.exports = {
                 mobile: {'raw': '(max-width: 767px) and (min-width: 576px)'},
                 mobile_small: {'raw': '(max-width: 575px)'},
                 mobile_extra_small: {'raw': '(max-width: 479px)'},
+                'tall': { 'raw': '(max-height: 870px)' },
             },
         }
     },

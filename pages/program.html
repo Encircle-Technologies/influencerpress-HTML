@@ -18,15 +18,14 @@
     <header class="header absolute top-0 left-0 w-full pt-30 pb-0 z-99">
         <div class="container-fluid relative z-1">
             <div class="w-full lg:w-11/12 mx-auto">
-                <div class="flex flex-wrap justify-between items-center">
-                    <div class="logo order-2">
+                <div class="grid grid-cols-2 sm:grid-cols-3 gap-x-5 lg:flex lg:flex-wrap justify-between items-center">
+                    <div class="logo order-1 sm:order-2">
                         <a href="#">
                             <img src="../assets/images/logo.png" alt="Logo">
                         </a>
-                    </div>
-                    
-                    <div class="navbar order-1">
-                        <button class="navbar-toggler bg-transparent border-0 flex flex-col gap-y-4 order-1 p-0 lg:w-[207px] cursor-pointer" type="button">
+                    </div>                    
+                    <div class="navbar order-2 sm:order-1 sm:ml-0 ml-auto">
+                        <button class="navbar-toggler bg-transparent border-0 flex flex-col gap-y-2 lg:gap-y-4 order-1 p-0 md:w-[207px] cursor-pointer" type="button">
                             <span></span>
                             <span></span>
                         </button>
@@ -43,12 +42,13 @@
                                         <li><a href="program.html">Program</a></li>
                                         <li><a href="#">Results</a></li>
                                         <li><a href="#">Apply</a></li>
+                                        <li class="sm:hidden"><a href="#">Book now</a></li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="btn-custom block order-3">
+                    <div class="btn-custom !hidden sm:!block sm:order-3 ml-auto">
                         <a href="#" class="btn btn-b-white">Book now</a>
                     </div>
                 </div>
@@ -57,11 +57,11 @@
     </header>
     <!-- Header End -->
 
-    <section class="banner h-[90vh]">
+    <section class="banner h-[90vh] tall:h-[823px] mdscreen:h-[610px]">
         <div class="banner-img relative w-full h-full" style="background-image:url('../assets/images/program-banner.jpg')">
             <div class="container-fluid h-full">
-                <div class="flex flex-col justify-center items-center h-full relative z-1 py-75">
-                    <div class="banner-content mt-auto mb-[150px]">
+                <div class="flex flex-col justify-center items-center h-full relative z-1 pt-[97px] pb-40 lg:py-75">
+                    <div class="banner-content mt-auto my-auto lg:mb-[150px]">
                         <div class="title title_white capitalize text-center mb-40 lg:mb-60 last:mb-0">
                             <h1 class="text-38 leading-[48px] xl:text-78 xl:leading-[120%] -tracking-6">
                                 Concierge Style Fulfillment.
@@ -96,7 +96,7 @@
                         Get your prospects 82.3% sold 
                         <span>before they even talk to you</span>
                       </h2>
-                      <h5 class="text-[27px] leading-44 -tracking-2 !font-400 !text-opacity-50">
+                      <h5 class="text-16 leading-26 lg:text-[27px] lg:leading-44 -tracking-2 !font-400 !text-opacity-50">
                         Using applied influence research with integration of sales, marketing and PR systems we've transformed how businesses acquire customers.
                       </h5>
                     </div>
@@ -143,7 +143,7 @@
                 </ul>
             </div>
         </div>
-        <div class="process-slider swiper">
+        <div class="process-slider swiper mdscreen:mt-40">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
                     <div class="flex flex-col items-start gap-7 lg:gap-14 relative -rotate-[30deg]">
@@ -247,7 +247,7 @@
         </div>
     </section>
 
-    <section class="phase lg:pt-100 md:pt-60 pt-40 relative">
+    <section class="phase lg:py-100 md:py-60 py-40 relative">
         <div class="container-fluid">
             <div class="text-center md:mb-60 mb-40">
                 <div class="preheading pb-20">
@@ -264,7 +264,7 @@
         <div class="container-fluid">
             <div class="flex flex-col gap-8 lg:gap-16 relative w-full">
                 <div class="flex flex-wrap lgscreen:flex-col bg-black100 relative rounded-[10px] w-full overflow-hidden">
-                    <div class="w-full lg:w-7/12 lg:order-2 order-1">
+                    <div class="w-full lg:w-7/12 lg:order-2 order-2">
                         <div class="video_overlay img w-full lg:h-full relative z-1">
                             <video id="video" class="video block w-full h-full object-cover" preload="metadata" poster="../assets/images/phasev1.jpg">
                                 <source src="//cdn.jsdelivr.net/npm/big-buck-bunny-1080p@0.0.6/video.mp4" type="video/mp4">
@@ -277,14 +277,14 @@
                             </div>
                         </div>
                     </div>
-                    <div class="w-full lg:w-5/12 lg:order-1 order-2">
+                    <div class="w-full lg:w-5/12 lg:order-1 order-1">
                         <div class="py-40 px-20 lg:py-60 lg:px-40 xl:py-70 xl:px-70 lg:h-full flex flex-col justify-center">
                             <div class="title title_white mb-20 last:mb-0">
                                 <h2 class="text-32 leading-[44px] xl:text-60 xl:leading-[120%] -tracking-6 mb-20 last:mb-0">
                                     Phase 1
                                     <span>Gravity</span>
                                 </h2>
-                                <h5 class="text-18 leading-[120%] xl:text-30 xl:leading-41 -tracking-2 !font-400 opacity-50">
+                                <h5 class="text-20 leading-[120%] xl:text-30 xl:leading-41 -tracking-2 !font-400 opacity-50">
                                     Turn your prospects' resistance into resonance.
                                 </h5>
                             </div>
@@ -297,7 +297,7 @@
                     </div>
                 </div>
                 <div class="flex flex-wrap lgscreen:flex-col bg-black100 relative rounded-[10px] w-full overflow-hidden">
-                    <div class="w-full lg:w-7/12 lg:order-1 order-1">
+                    <div class="w-full lg:w-7/12 lg:order-1 order-2">
                         <div class="video_overlay img w-full lg:h-full relative z-1">
                             <video id="video" class="video block w-full h-full object-cover" preload="metadata" poster="../assets/images/phasev2.jpg">
                                 <source src="//cdn.jsdelivr.net/npm/big-buck-bunny-1080p@0.0.6/video.mp4" type="video/mp4">
@@ -310,7 +310,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="w-full lg:w-5/12 lg:order-2 order-2">
+                    <div class="w-full lg:w-5/12 lg:order-2 order-1">
                         <div class="py-40 px-20 lg:py-60 lg:px-40 xl:py-70 xl:px-70 lg:h-full flex flex-col justify-center">
                             <div class="title title_white mb-20 last:mb-0">
                                 <h2 class="text-32 leading-[44px] xl:text-60 xl:leading-[120%] -tracking-6 mb-20 last:mb-0">
@@ -330,7 +330,7 @@
                     </div>
                 </div>
                 <div class="flex flex-wrap lgscreen:flex-col bg-black100 relative rounded-[10px] w-full overflow-hidden">
-                    <div class="w-full lg:w-7/12 lg:order-2 order-1">
+                    <div class="w-full lg:w-7/12 lg:order-2 order-2">
                         <div class="video_overlay img w-full lg:h-full relative z-1">
                             <video id="video" class="video block w-full h-full object-cover" preload="metadata" poster="../assets/images/phasev3.jpg">
                                 <source src="//cdn.jsdelivr.net/npm/big-buck-bunny-1080p@0.0.6/video.mp4" type="video/mp4">
@@ -343,7 +343,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="w-full lg:w-5/12 lg:order-1 order-2">
+                    <div class="w-full lg:w-5/12 lg:order-1 order-1">
                         <div class="py-40 px-20 lg:py-60 lg:px-40 xl:py-70 xl:px-70 lg:h-full flex flex-col justify-center">
                             <div class="title title_white mb-20 last:mb-0">
                                 <h2 class="text-32 leading-[44px] xl:text-60 xl:leading-[120%] -tracking-6 mb-20 last:mb-0">
@@ -366,10 +366,114 @@
         </div>
     </section>
 
-    <section class="quotes">
+    <section class="text-quote">
         <div class="container-fluid">
-            <div class="grid md:grid-cols-2 grid-cols-1 relative ">
+            <div class="flex flex-wrap gap-y-10 lg:pb-100 md:pb-60 pb-40 border-0 border-b border-solid border-white border-opacity-20">
+                <div class="lg:w-6/12 w-full lg:px-40 xlscreen:px-15">
+                    <div class="text-quote-content text-center">
+                        <img src="../assets/images/quote.png" class="mx-auto mb-30" alt="Quote">
+                        <h6 class="text-32 leading-48 desktop2:text-24 desktop2:leading-36 italic text-white font-300">
+                            Working with Influencer Press is by far the best experience that I have ever had.They deliver what they say.You see results weekly. The results exceeded my expectations..
 
+                        </h6>
+                        <span class="font-secondary text-white text-36 desktop2:text-28 -tracking-6 mt-30 lgscreen:mt-25 inline-block">
+                            Danny Singson 
+                        </span>
+                        <p class="text-16 tracking-30 text-white opacity-30 uppercase font-500 mt-5 mb-20">
+                            Xtreme 1 Financial
+                        </p>
+                        <h6 class="text-24 leading-30 -tracking-2 text-white opacity-50 font-400">
+                            #1 Financial Brokerage in San Fransisco
+                        </h6>
+                    </div>
+                </div>
+                <div class="lg:w-6/12 w-full lg:px-40 xlscreen:px-15">
+                    <div class="text-quote-content text-center">
+                        <img src="../assets/images/quote.png" class="mx-auto mb-30" alt="Quote">
+                        <h6 class="text-32 leading-48 desktop2:text-24 desktop2:leading-36 italic text-white font-300">
+                            It is very important to think about this in today's day and age.They are able to craft the story and put the exact image you want out there. I am impressed  by the process. I recommend them highly.
+
+                        </h6>
+                        <span class="font-secondary text-white text-36 desktop2:text-28 -tracking-6 mt-30 lgscreen:mt-25 inline-block">
+                            Ryan Mulvany
+                        </span>
+                        <p class="text-16 tracking-30 text-white opacity-30 uppercase font-500 mt-5 mb-20">
+                            Quiverr
+                        </p>
+                        <h6 class="text-24 leading-30 -tracking-2 text-white opacity-50 font-400">
+                            Quiverr has over $1 Billion in Sales
+                        </h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq lg:pt-100 md:pt-60 pt-40">
+        <div class="container-fluid">
+            <div class="w-full">
+                <div class="text-center md:mb-60 mb-40">
+                    <div class="preheading pb-20">
+                    <span class="uppercase text-white text-opacity-50 text-17 font-500 tracking-30">faq</span>
+                    </div>
+                    <div class="title_white">
+                    <h2 class="text-32 leading-[44px] xl:text-60 xl:leading-[120%] -tracking-4 mb-20 last:mb-0">
+                        Frequently asked questions
+                    </h2>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full lg:w-8/12 mx-auto">
+                <div id="accordion" class="accordion-container">
+                    <h4 class="accordion-title js-accordion-title">What happens when i schedule a call?</h4>
+                    <div class="accordion-content">
+                        <div class="content white lg">
+                            <p>After you schedule a call, our specialists will determine if our process could be a win-win relationship for you, how preinfluence works, and how it could potentially serve you. If there is a clear fit, you’ll move forward to talking with our head of enrollment where we will do a deep dive into your business, analyze your biggest growth inhibitor and design your leverage roadmap.</p>
+                        </div>
+                    </div>
+                    <h4 class="accordion-title js-accordion-title">Are you a PR Company?</h4>
+                    <div class="accordion-content">
+                        <div class="content white lg">
+                            <p>After you schedule a call, our specialists will determine if our process could be a win-win relationship for you, how preinfluence works, and how it could potentially serve you. If there is a clear fit, you’ll move forward to talking with our head of enrollment where we will do a deep dive into your business, analyze your biggest growth inhibitor and design your leverage roadmap.</p>
+                        </div>
+                    </div>
+                    <h4 class="accordion-title js-accordion-title">What is a Pre-Influence?</h4>
+                    <div class="accordion-content">
+                        <div class="content white lg">
+                            <p>After you schedule a call, our specialists will determine if our process could be a win-win relationship for you, how preinfluence works, and how it could potentially serve you. If there is a clear fit, you’ll move forward to talking with our head of enrollment where we will do a deep dive into your business, analyze your biggest growth inhibitor and design your leverage roadmap.</p>
+                        </div>
+                    </div>
+                    <h4 class="accordion-title js-accordion-title">Who is this program for?</h4>
+                    <div class="accordion-content">
+                        <div class="content white lg">
+                            <p>After you schedule a call, our specialists will determine if our process could be a win-win relationship for you, how preinfluence works, and how it could potentially serve you. If there is a clear fit, you’ll move forward to talking with our head of enrollment where we will do a deep dive into your business, analyze your biggest growth inhibitor and design your leverage roadmap.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="fullimg-content lg:py-100 md:py-60 py-40">
+        <div class="container-fluid">
+            <div class="relative txt-shadow">
+                <div class="img">
+                    <img src="../assets/images/PreInfluence3.jpg" class="w-full h-[443px] md:h-[643px] object-right object-none block rounded-[8px] !ml-0" alt="Preinfluence">
+                </div>
+                <div class="absolute top-0 left-0 z-1 xl:py-100 xl:px-90 md:px-45 md:py-50 p-30">
+                    <div class="flex flex-col">
+                        <div class="title title_white">
+                            <h2 class="text-30 leading-[42px] xl:text-[52px] xl:leading-[72px] -tracking-4">
+                                Ready to step into the world
+                                <span class="!-tracking-4">of Preinfluence?</span>
+                            </h2>
+                        </div>
+                    </div>
+                    <div class="btn-custom mt-30 lg:mt-50 flex flex-wrap">
+                        <a href="#" class="btn-white">BOOK A DISCOVERY CALL</a>
+                        <a href="#" class="btn-b-white">program overview</a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
