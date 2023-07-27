@@ -33,24 +33,24 @@ $(document).ready(function() {
 // Menu End
 
 // Circle Start
-$(document).ready(function () {
-    var text = document.querySelector(".text");
-    text.innerHTML = text.innerText
-    .split("")
-    .map(
-        (char, i) => `<span style="transform:rotate(${i * 14.7}deg)">${char}</span>`
-    )
-    .join("");
-});
-$(document).ready(function () {
-  var textC = document.querySelector(".text-c");
-  textC.innerHTML = textC.innerText
-  .split("")
-  .map(
-      (char, i) => `<span style="transform:rotate(${i * 16}deg)">${char}</span>`
-  )
-  .join("");
-});
+// $(document).ready(function () {
+//     var text = document.querySelector(".text");
+//     text.innerHTML = text.innerText
+//     .split("")
+//     .map(
+//         (char, i) => `<span style="transform:rotate(${i * 14.7}deg)">${char}</span>`
+//     )
+//     .join("");
+// });
+// $(document).ready(function () {
+//   var textC = document.querySelector(".text-c");
+//   textC.innerHTML = textC.innerText
+//   .split("")
+//   .map(
+//       (char, i) => `<span style="transform:rotate(${i * 16}deg)">${char}</span>`
+//   )
+//   .join("");
+// });
 // Circle End
 
 // Modal Start
@@ -150,7 +150,26 @@ $(document).ready(function($) {
       autoplay: {
           delay: 1500,
       },
+      breakpoints: {
+        0: {
+          slidesPerView: 1,
+          spaceBetween: 10,
+        },
+        640: {
+          slidesPerView: 1.5,
+          spaceBetween: 10,
+        },
+        768: {
+          slidesPerView: 2.05,
+          spaceBetween: 15,
+        },
+        1024: {
+          slidesPerView: 3.5,
+          spaceBetween: 22,
+        },
+      },
   });
+
   var ltrswiper = new Swiper(".ltr", {
       loop: true,
       slidesPerView: 4,
@@ -160,19 +179,134 @@ $(document).ready(function($) {
       autoplay: {
           delay: 1500,
       },
-  });
-  $(".rtl").mouseenter(function() {
-    rtlswiper.autoplay.stop();
-  });
-  $(".rtl").mouseleave(function() {
-    rtlswiper.autoplay.start();
+      breakpoints: {
+        0: {
+          slidesPerView: 1,
+          spaceBetween: 10,
+        },
+        640: {
+          slidesPerView: 1.2,
+          spaceBetween: 10,
+        },
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 15,
+        },
+        1024: {
+          slidesPerView: 4,
+          spaceBetween: 22,
+        },
+      },
   });
 
-  $(".ltr").mouseenter(function() {
-    ltrswiper.autoplay.stop();
+  var rtlswiper1 = new Swiper(".client-testimonial-slider .rtl", {
+    loop: true,
+    spaceBetween: 22,
+    speed: 2000,
+    centeredSlides: false,
+    autoplay: {
+        delay: 1500,
+    },
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+        spaceBetween: 10,
+      },
+      640: {
+        slidesPerView: 1.5,
+        spaceBetween: 10,
+      },
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 15,
+      },
+      1024: {
+        slidesPerView: 2.5,
+        spaceBetween: 22,
+      },
+    },
   });
-  $(".ltr").mouseleave(function() {
-    ltrswiper.autoplay.start();
+  var ltrswiper1 = new Swiper(".client-testimonial-slider .ltr", {
+      loop: true,
+      spaceBetween: 22,
+      centeredSlides: true,
+      speed: 2500,
+      autoplay: {
+          delay: 2000,
+      },
+      breakpoints: {
+        0: {
+          slidesPerView: 1,
+          spaceBetween: 10,
+        },
+        640: {
+          slidesPerView: 1.5,
+          spaceBetween: 10,
+        },
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 15,
+        },
+        1024: {
+          slidesPerView: 2.5,
+          spaceBetween: 22,
+        },
+      },
+  });
+
+  var rtlswiper2 = new Swiper(".client-testimonial-slider .rtl2", {
+    loop: true,
+    spaceBetween: 22,
+    speed: 3000,
+    centeredSlides: false,
+    autoplay: {
+        delay: 2500,
+    },
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+        spaceBetween: 10,
+      },
+      640: {
+        slidesPerView: 1.5,
+        spaceBetween: 10,
+      },
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 15,
+      },
+      1024: {
+        slidesPerView: 2.4,
+        spaceBetween: 22,
+      },
+    },
+  });
+  var ltrswiper2 = new Swiper(".client-testimonial-slider .ltr2", {
+    loop: true,
+    spaceBetween: 22,
+    // centeredSlides: true,
+    speed: 3500,
+    autoplay: {
+        delay: 3000,
+    },
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+        spaceBetween: 10,
+      },
+      640: {
+        slidesPerView: 1.5,
+        spaceBetween: 10,
+      },
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 15,
+      },
+      1024: {
+        slidesPerView: 2.5,
+        spaceBetween: 22,
+      },
+    },
   });
 
   const imgslider = new Swiper(".img-slider-inner", {
